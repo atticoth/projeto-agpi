@@ -144,6 +144,9 @@
     <EmbeddedResource Include="Views\frm_Paciente.resx">
       <DependentUpon>frm_Paciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_Triagem.resx">
+      <DependentUpon>frm_Triagem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DB_AGPIDataSet.xsc">
       <DependentUpon>DB_AGPIDataSet.xsd</DependentUpon>
     </None>

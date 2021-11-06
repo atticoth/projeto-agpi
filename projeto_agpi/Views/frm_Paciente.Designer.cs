@@ -39,6 +39,8 @@ namespace projeto_agpi.Views
             this.dgConsulta = new System.Windows.Forms.DataGridView();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bnNovoItem = new System.Windows.Forms.ToolStripButton();
+            this.tblPacienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_AGPIDataSet = new projeto_agpi.DB_AGPIDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,16 +50,14 @@ namespace projeto_agpi.Views
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dB_AGPIDataSet = new projeto_agpi.DB_AGPIDataSet();
-            this.tblPacienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_PacienteTableAdapter = new projeto_agpi.DB_AGPIDataSetTableAdapters.tbl_PacienteTableAdapter();
             this.pnlTitle.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPacienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_PesquisaCPF
@@ -162,6 +162,16 @@ namespace projeto_agpi.Views
             this.bnNovoItem.Size = new System.Drawing.Size(23, 22);
             this.bnNovoItem.Text = "Novo Item";
             // 
+            // tblPacienteBindingSource
+            // 
+            this.tblPacienteBindingSource.DataMember = "tbl_Paciente";
+            this.tblPacienteBindingSource.DataSource = this.dB_AGPIDataSet;
+            // 
+            // dB_AGPIDataSet
+            // 
+            this.dB_AGPIDataSet.DataSetName = "DB_AGPIDataSet";
+            this.dB_AGPIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -230,16 +240,6 @@ namespace projeto_agpi.Views
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // dB_AGPIDataSet
-            // 
-            this.dB_AGPIDataSet.DataSetName = "DB_AGPIDataSet";
-            this.dB_AGPIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblPacienteBindingSource
-            // 
-            this.tblPacienteBindingSource.DataMember = "tbl_Paciente";
-            this.tblPacienteBindingSource.DataSource = this.dB_AGPIDataSet;
-            // 
             // tbl_PacienteTableAdapter
             // 
             this.tbl_PacienteTableAdapter.ClearBeforeFill = true;
@@ -263,8 +263,8 @@ namespace projeto_agpi.Views
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPacienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

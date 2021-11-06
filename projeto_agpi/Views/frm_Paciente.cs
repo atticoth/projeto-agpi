@@ -88,8 +88,6 @@ namespace projeto_agpi.Views
         {
             // TODO: This line of code loads data into the 'dB_AGPIDataSet.tbl_Paciente' table. You can move, or remove it, as needed.
             this.tbl_PacienteTableAdapter.Fill(this.dB_AGPIDataSet.tbl_Paciente);
-            // TODO: This line of code loads data into the 'dB_AGPIDataSet.tbl_Paciente' table. You can move, or remove it, as needed.
-            this.tbl_PacienteTableAdapter.Fill(this.dB_AGPIDataSet.tbl_Paciente);
             LoadConsultas();
         }
 
