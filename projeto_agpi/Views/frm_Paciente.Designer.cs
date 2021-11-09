@@ -149,7 +149,7 @@ namespace projeto_agpi.Views
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(232, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(263, 25);
             this.bindingNavigator1.TabIndex = 61;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -161,6 +161,7 @@ namespace projeto_agpi.Views
             this.bnNovoItem.RightToLeftAutoMirrorImage = true;
             this.bnNovoItem.Size = new System.Drawing.Size(23, 22);
             this.bnNovoItem.Text = "Novo Item";
+            this.bnNovoItem.Click += new System.EventHandler(this.bnNovoItem_Click);
             // 
             // tblPacienteBindingSource
             // 
