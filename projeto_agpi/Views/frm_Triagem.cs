@@ -91,9 +91,9 @@ namespace projeto_agpi.Views
 
         private void bnNovoItem_Click(object sender, EventArgs e)
         {
-            frm_NewPaciente newPaciente = new frm_NewPaciente();
-            newPaciente.StartPosition = FormStartPosition.CenterScreen;
-            newPaciente.ShowDialog();
+            frm_NewTriagem newTriagem = new frm_NewTriagem();
+            newTriagem.StartPosition = FormStartPosition.CenterScreen;
+            newTriagem.ShowDialog();
             LoadConsultas();
         }
     }

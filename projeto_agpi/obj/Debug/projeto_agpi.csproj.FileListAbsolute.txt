@@ -40,3 +40,4 @@ C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\bi
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.exe.licenses
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.Views.frm_Agendamento.resources
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.Views.frm_Triagem.resources
+C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.Views.frm_NewTriagem.resources

@@ -114,6 +114,7 @@ namespace projeto_agpi.Views
             // 
             // txt_NomePaciente
             // 
+            this.txt_NomePaciente.Enabled = false;
             this.txt_NomePaciente.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NomePaciente.Location = new System.Drawing.Point(184, 76);
             this.txt_NomePaciente.Name = "txt_NomePaciente";

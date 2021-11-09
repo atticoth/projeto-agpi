@@ -103,6 +103,12 @@
     <Compile Include="Views\frm_NewPaciente.Designer.cs">
       <DependentUpon>frm_NewPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frm_NewTriagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_NewTriagem.Designer.cs">
+      <DependentUpon>frm_NewTriagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frm_Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </Compile>
     <EmbeddedResource Include="Views\frm_NewPaciente.resx">
       <DependentUpon>frm_NewPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_NewTriagem.resx">
+      <DependentUpon>frm_NewTriagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_Paciente.resx">
       <DependentUpon>frm_Paciente.cs</DependentUpon>
