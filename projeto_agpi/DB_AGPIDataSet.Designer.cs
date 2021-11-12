@@ -2403,13 +2403,13 @@ namespace projeto_agpi {
             
             private global::System.Data.DataColumn columnCodAgendamento_FK;
             
-            private global::System.Data.DataColumn columnPressão;
+            private global::System.Data.DataColumn columnPressao;
             
             private global::System.Data.DataColumn columnTemperatura;
             
-            private global::System.Data.DataColumn columnSaturação;
+            private global::System.Data.DataColumn columnSaturacao;
             
-            private global::System.Data.DataColumn columnObservação;
+            private global::System.Data.DataColumn columnObservacao;
             
             private global::System.Data.DataColumn columnData_Insert;
             
@@ -2464,9 +2464,9 @@ namespace projeto_agpi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PressãoColumn {
+            public global::System.Data.DataColumn PressaoColumn {
                 get {
-                    return this.columnPressão;
+                    return this.columnPressao;
                 }
             }
             
@@ -2480,17 +2480,17 @@ namespace projeto_agpi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SaturaçãoColumn {
+            public global::System.Data.DataColumn SaturacaoColumn {
                 get {
-                    return this.columnSaturação;
+                    return this.columnSaturacao;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ObservaçãoColumn {
+            public global::System.Data.DataColumn ObservacaoColumn {
                 get {
-                    return this.columnObservação;
+                    return this.columnObservacao;
                 }
             }
             
@@ -2539,15 +2539,15 @@ namespace projeto_agpi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_TriagemRow Addtbl_TriagemRow(tbl_ConsultaAgendadaRow parenttbl_ConsultaAgendadaRowByFK_Triagem_ConsultaAgendada, string Pressão, string Temperatura, string Saturação, string Observação, System.DateTime Data_Insert) {
+            public tbl_TriagemRow Addtbl_TriagemRow(tbl_ConsultaAgendadaRow parenttbl_ConsultaAgendadaRowByFK_Triagem_ConsultaAgendada, string Pressao, string Temperatura, string Saturacao, string Observacao, System.DateTime Data_Insert) {
                 tbl_TriagemRow rowtbl_TriagemRow = ((tbl_TriagemRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
-                        Pressão,
+                        Pressao,
                         Temperatura,
-                        Saturação,
-                        Observação,
+                        Saturacao,
+                        Observacao,
                         Data_Insert};
                 if ((parenttbl_ConsultaAgendadaRowByFK_Triagem_ConsultaAgendada != null)) {
                     columnValuesArray[1] = parenttbl_ConsultaAgendadaRowByFK_Triagem_ConsultaAgendada[0];
@@ -2583,10 +2583,10 @@ namespace projeto_agpi {
             internal void InitVars() {
                 this.columnCodTriagem = base.Columns["CodTriagem"];
                 this.columnCodAgendamento_FK = base.Columns["CodAgendamento_FK"];
-                this.columnPressão = base.Columns["Pressão"];
+                this.columnPressao = base.Columns["Pressao"];
                 this.columnTemperatura = base.Columns["Temperatura"];
-                this.columnSaturação = base.Columns["Saturação"];
-                this.columnObservação = base.Columns["Observação"];
+                this.columnSaturacao = base.Columns["Saturacao"];
+                this.columnObservacao = base.Columns["Observacao"];
                 this.columnData_Insert = base.Columns["Data_Insert"];
             }
             
@@ -2597,14 +2597,14 @@ namespace projeto_agpi {
                 base.Columns.Add(this.columnCodTriagem);
                 this.columnCodAgendamento_FK = new global::System.Data.DataColumn("CodAgendamento_FK", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodAgendamento_FK);
-                this.columnPressão = new global::System.Data.DataColumn("Pressão", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPressão);
+                this.columnPressao = new global::System.Data.DataColumn("Pressao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPressao);
                 this.columnTemperatura = new global::System.Data.DataColumn("Temperatura", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTemperatura);
-                this.columnSaturação = new global::System.Data.DataColumn("Saturação", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSaturação);
-                this.columnObservação = new global::System.Data.DataColumn("Observação", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnObservação);
+                this.columnSaturacao = new global::System.Data.DataColumn("Saturacao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSaturacao);
+                this.columnObservacao = new global::System.Data.DataColumn("Observacao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnObservacao);
                 this.columnData_Insert = new global::System.Data.DataColumn("Data_Insert", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Insert);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -2616,14 +2616,14 @@ namespace projeto_agpi {
                 this.columnCodTriagem.ReadOnly = true;
                 this.columnCodTriagem.Unique = true;
                 this.columnCodAgendamento_FK.AllowDBNull = false;
-                this.columnPressão.AllowDBNull = false;
-                this.columnPressão.MaxLength = 50;
+                this.columnPressao.AllowDBNull = false;
+                this.columnPressao.MaxLength = 50;
                 this.columnTemperatura.AllowDBNull = false;
                 this.columnTemperatura.MaxLength = 50;
-                this.columnSaturação.AllowDBNull = false;
-                this.columnSaturação.MaxLength = 50;
-                this.columnObservação.AllowDBNull = false;
-                this.columnObservação.MaxLength = 50;
+                this.columnSaturacao.AllowDBNull = false;
+                this.columnSaturacao.MaxLength = 50;
+                this.columnObservacao.AllowDBNull = false;
+                this.columnObservacao.MaxLength = 50;
                 this.columnData_Insert.AllowDBNull = false;
             }
             
@@ -4571,12 +4571,12 @@ namespace projeto_agpi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Pressão {
+            public string Pressao {
                 get {
-                    return ((string)(this[this.tabletbl_Triagem.PressãoColumn]));
+                    return ((string)(this[this.tabletbl_Triagem.PressaoColumn]));
                 }
                 set {
-                    this[this.tabletbl_Triagem.PressãoColumn] = value;
+                    this[this.tabletbl_Triagem.PressaoColumn] = value;
                 }
             }
             
@@ -4593,23 +4593,23 @@ namespace projeto_agpi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Saturação {
+            public string Saturacao {
                 get {
-                    return ((string)(this[this.tabletbl_Triagem.SaturaçãoColumn]));
+                    return ((string)(this[this.tabletbl_Triagem.SaturacaoColumn]));
                 }
                 set {
-                    this[this.tabletbl_Triagem.SaturaçãoColumn] = value;
+                    this[this.tabletbl_Triagem.SaturacaoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Observação {
+            public string Observacao {
                 get {
-                    return ((string)(this[this.tabletbl_Triagem.ObservaçãoColumn]));
+                    return ((string)(this[this.tabletbl_Triagem.ObservacaoColumn]));
                 }
                 set {
-                    this[this.tabletbl_Triagem.ObservaçãoColumn] = value;
+                    this[this.tabletbl_Triagem.ObservacaoColumn] = value;
                 }
             }
             
@@ -7434,51 +7434,51 @@ SELECT CodPacien, Nome, DataNascimento, CPF, RG, Convenio, Telefone, Celular, Em
             tableMapping.DataSetTable = "tbl_Triagem";
             tableMapping.ColumnMappings.Add("CodTriagem", "CodTriagem");
             tableMapping.ColumnMappings.Add("CodAgendamento_FK", "CodAgendamento_FK");
-            tableMapping.ColumnMappings.Add("Pressão", "Pressão");
+            tableMapping.ColumnMappings.Add("Pressao", "Pressao");
             tableMapping.ColumnMappings.Add("Temperatura", "Temperatura");
-            tableMapping.ColumnMappings.Add("Saturação", "Saturação");
-            tableMapping.ColumnMappings.Add("Observação", "Observação");
+            tableMapping.ColumnMappings.Add("Saturacao", "Saturacao");
+            tableMapping.ColumnMappings.Add("Observacao", "Observacao");
             tableMapping.ColumnMappings.Add("Data_Insert", "Data_Insert");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_Triagem] WHERE (([CodTriagem] = @Original_CodTriagem) AND ([CodAgendamento_FK] = @Original_CodAgendamento_FK) AND ([Pressão] = @Original_Pressão) AND ([Temperatura] = @Original_Temperatura) AND ([Saturação] = @Original_Saturação) AND ([Observação] = @Original_Observação) AND ([Data_Insert] = @Original_Data_Insert))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_Triagem] WHERE (([CodTriagem] = @Original_CodTriagem) AND ([CodAgendamento_FK] = @Original_CodAgendamento_FK) AND ([Pressao] = @Original_Pressao) AND ([Temperatura] = @Original_Temperatura) AND ([Saturacao] = @Original_Saturacao) AND ([Observacao] = @Original_Observacao) AND ([Data_Insert] = @Original_Data_Insert))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodTriagem", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodTriagem", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodAgendamento_FK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodAgendamento_FK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pressão", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressão", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pressao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Temperatura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temperatura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Saturação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturação", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Observação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observação", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Saturacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Observacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Insert", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Insert", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Triagem] ([CodAgendamento_FK], [Pressão], [Temperatura], [Saturação], [Observação], [Data_Insert]) VALUES (@CodAgendamento_FK, @Pressão, @Temperatura, @Saturação, @Observação, @Data_Insert);
-SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observação, Data_Insert FROM tbl_Triagem WHERE (CodTriagem = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Triagem] ([CodAgendamento_FK], [Pressao], [Temperatura], [Saturacao], [Observacao], [Data_Insert]) VALUES (@CodAgendamento_FK, @Pressao, @Temperatura, @Saturacao, @Observacao, @Data_Insert);
+SELECT CodTriagem, CodAgendamento_FK, Pressao, Temperatura, Saturacao, Observacao, Data_Insert FROM tbl_Triagem WHERE (CodTriagem = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodAgendamento_FK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodAgendamento_FK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pressão", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressão", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pressao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Temperatura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temperatura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Saturação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturação", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Observação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observação", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Saturacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Observacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Insert", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Insert", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_Triagem] SET [CodAgendamento_FK] = @CodAgendamento_FK, [Pressão] = @Pressão, [Temperatura] = @Temperatura, [Saturação] = @Saturação, [Observação] = @Observação, [Data_Insert] = @Data_Insert WHERE (([CodTriagem] = @Original_CodTriagem) AND ([CodAgendamento_FK] = @Original_CodAgendamento_FK) AND ([Pressão] = @Original_Pressão) AND ([Temperatura] = @Original_Temperatura) AND ([Saturação] = @Original_Saturação) AND ([Observação] = @Original_Observação) AND ([Data_Insert] = @Original_Data_Insert));
-SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observação, Data_Insert FROM tbl_Triagem WHERE (CodTriagem = @CodTriagem)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_Triagem] SET [CodAgendamento_FK] = @CodAgendamento_FK, [Pressao] = @Pressao, [Temperatura] = @Temperatura, [Saturacao] = @Saturacao, [Observacao] = @Observacao, [Data_Insert] = @Data_Insert WHERE (([CodTriagem] = @Original_CodTriagem) AND ([CodAgendamento_FK] = @Original_CodAgendamento_FK) AND ([Pressao] = @Original_Pressao) AND ([Temperatura] = @Original_Temperatura) AND ([Saturacao] = @Original_Saturacao) AND ([Observacao] = @Original_Observacao) AND ([Data_Insert] = @Original_Data_Insert));
+SELECT CodTriagem, CodAgendamento_FK, Pressao, Temperatura, Saturacao, Observacao, Data_Insert FROM tbl_Triagem WHERE (CodTriagem = @CodTriagem)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodAgendamento_FK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodAgendamento_FK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pressão", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressão", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pressao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Temperatura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temperatura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Saturação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturação", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Observação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observação", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Saturacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Observacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Insert", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Insert", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodTriagem", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodTriagem", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodAgendamento_FK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodAgendamento_FK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pressão", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressão", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pressao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pressao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Temperatura", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Temperatura", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Saturação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturação", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Observação", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observação", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Saturacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Saturacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Observacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Insert", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Insert", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodTriagem", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CodTriagem", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -7496,7 +7496,7 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observação" +
+            this._commandCollection[0].CommandText = "SELECT CodTriagem, CodAgendamento_FK, Pressao, Temperatura, Saturacao, Observacao" +
                 ", Data_Insert FROM dbo.tbl_Triagem";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -7558,14 +7558,14 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CodTriagem, int Original_CodAgendamento_FK, string Original_Pressão, string Original_Temperatura, string Original_Saturação, string Original_Observação, System.DateTime Original_Data_Insert) {
+        public virtual int Delete(int Original_CodTriagem, int Original_CodAgendamento_FK, string Original_Pressao, string Original_Temperatura, string Original_Saturacao, string Original_Observacao, System.DateTime Original_Data_Insert) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CodTriagem));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_CodAgendamento_FK));
-            if ((Original_Pressão == null)) {
-                throw new global::System.ArgumentNullException("Original_Pressão");
+            if ((Original_Pressao == null)) {
+                throw new global::System.ArgumentNullException("Original_Pressao");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Pressão));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Pressao));
             }
             if ((Original_Temperatura == null)) {
                 throw new global::System.ArgumentNullException("Original_Temperatura");
@@ -7573,17 +7573,17 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Temperatura));
             }
-            if ((Original_Saturação == null)) {
-                throw new global::System.ArgumentNullException("Original_Saturação");
+            if ((Original_Saturacao == null)) {
+                throw new global::System.ArgumentNullException("Original_Saturacao");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Saturação));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Saturacao));
             }
-            if ((Original_Observação == null)) {
-                throw new global::System.ArgumentNullException("Original_Observação");
+            if ((Original_Observacao == null)) {
+                throw new global::System.ArgumentNullException("Original_Observacao");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Observação));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Observacao));
             }
             this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_Data_Insert));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
@@ -7606,13 +7606,13 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int CodAgendamento_FK, string Pressão, string Temperatura, string Saturação, string Observação, System.DateTime Data_Insert) {
+        public virtual int Insert(int CodAgendamento_FK, string Pressao, string Temperatura, string Saturacao, string Observacao, System.DateTime Data_Insert) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(CodAgendamento_FK));
-            if ((Pressão == null)) {
-                throw new global::System.ArgumentNullException("Pressão");
+            if ((Pressao == null)) {
+                throw new global::System.ArgumentNullException("Pressao");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Pressão));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Pressao));
             }
             if ((Temperatura == null)) {
                 throw new global::System.ArgumentNullException("Temperatura");
@@ -7620,17 +7620,17 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Temperatura));
             }
-            if ((Saturação == null)) {
-                throw new global::System.ArgumentNullException("Saturação");
+            if ((Saturacao == null)) {
+                throw new global::System.ArgumentNullException("Saturacao");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Saturação));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Saturacao));
             }
-            if ((Observação == null)) {
-                throw new global::System.ArgumentNullException("Observação");
+            if ((Observacao == null)) {
+                throw new global::System.ArgumentNullException("Observacao");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Observação));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Observacao));
             }
             this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Data_Insert));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
@@ -7653,13 +7653,13 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int CodAgendamento_FK, string Pressão, string Temperatura, string Saturação, string Observação, System.DateTime Data_Insert, int Original_CodTriagem, int Original_CodAgendamento_FK, string Original_Pressão, string Original_Temperatura, string Original_Saturação, string Original_Observação, System.DateTime Original_Data_Insert, int CodTriagem) {
+        public virtual int Update(int CodAgendamento_FK, string Pressao, string Temperatura, string Saturacao, string Observacao, System.DateTime Data_Insert, int Original_CodTriagem, int Original_CodAgendamento_FK, string Original_Pressao, string Original_Temperatura, string Original_Saturacao, string Original_Observacao, System.DateTime Original_Data_Insert, int CodTriagem) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(CodAgendamento_FK));
-            if ((Pressão == null)) {
-                throw new global::System.ArgumentNullException("Pressão");
+            if ((Pressao == null)) {
+                throw new global::System.ArgumentNullException("Pressao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Pressão));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Pressao));
             }
             if ((Temperatura == null)) {
                 throw new global::System.ArgumentNullException("Temperatura");
@@ -7667,26 +7667,26 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Temperatura));
             }
-            if ((Saturação == null)) {
-                throw new global::System.ArgumentNullException("Saturação");
+            if ((Saturacao == null)) {
+                throw new global::System.ArgumentNullException("Saturacao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Saturação));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Saturacao));
             }
-            if ((Observação == null)) {
-                throw new global::System.ArgumentNullException("Observação");
+            if ((Observacao == null)) {
+                throw new global::System.ArgumentNullException("Observacao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Observação));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Observacao));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Data_Insert));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_CodTriagem));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_CodAgendamento_FK));
-            if ((Original_Pressão == null)) {
-                throw new global::System.ArgumentNullException("Original_Pressão");
+            if ((Original_Pressao == null)) {
+                throw new global::System.ArgumentNullException("Original_Pressao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Pressão));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Pressao));
             }
             if ((Original_Temperatura == null)) {
                 throw new global::System.ArgumentNullException("Original_Temperatura");
@@ -7694,17 +7694,17 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Temperatura));
             }
-            if ((Original_Saturação == null)) {
-                throw new global::System.ArgumentNullException("Original_Saturação");
+            if ((Original_Saturacao == null)) {
+                throw new global::System.ArgumentNullException("Original_Saturacao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Saturação));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Saturacao));
             }
-            if ((Original_Observação == null)) {
-                throw new global::System.ArgumentNullException("Original_Observação");
+            if ((Original_Observacao == null)) {
+                throw new global::System.ArgumentNullException("Original_Observacao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Observação));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Observacao));
             }
             this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Data_Insert));
             this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(CodTriagem));
@@ -7728,8 +7728,8 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int CodAgendamento_FK, string Pressão, string Temperatura, string Saturação, string Observação, System.DateTime Data_Insert, int Original_CodTriagem, int Original_CodAgendamento_FK, string Original_Pressão, string Original_Temperatura, string Original_Saturação, string Original_Observação, System.DateTime Original_Data_Insert) {
-            return this.Update(CodAgendamento_FK, Pressão, Temperatura, Saturação, Observação, Data_Insert, Original_CodTriagem, Original_CodAgendamento_FK, Original_Pressão, Original_Temperatura, Original_Saturação, Original_Observação, Original_Data_Insert, Original_CodTriagem);
+        public virtual int Update(int CodAgendamento_FK, string Pressao, string Temperatura, string Saturacao, string Observacao, System.DateTime Data_Insert, int Original_CodTriagem, int Original_CodAgendamento_FK, string Original_Pressao, string Original_Temperatura, string Original_Saturacao, string Original_Observacao, System.DateTime Original_Data_Insert) {
+            return this.Update(CodAgendamento_FK, Pressao, Temperatura, Saturacao, Observacao, Data_Insert, Original_CodTriagem, Original_CodAgendamento_FK, Original_Pressao, Original_Temperatura, Original_Saturacao, Original_Observacao, Original_Data_Insert, Original_CodTriagem);
         }
     }
     
@@ -8441,6 +8441,64 @@ SELECT CodTriagem, CodAgendamento_FK, Pressão, Temperatura, Saturação, Observ
             DB_AGPIDataSet.DEFAULT_SELECT_PACIENTEDataTable dataTable = new DB_AGPIDataSet.DEFAULT_SELECT_PACIENTEDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.IDbCommand[] _commandCollection;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.IDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.IDbCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::projeto_agpi.Properties.Settings.Default.DB_AGPIConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.DEFAULT_SELECT_TRIAGEM";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int DEFAULT_SELECT_TRIAGEM() {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

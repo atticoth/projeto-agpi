@@ -80,7 +80,7 @@ namespace projeto_agpi.Views
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Paciente não cadastrado!", "Erro");
+                MessageBox.Show(ex.Message, "Erro");
             }
         }
 
@@ -108,11 +108,11 @@ namespace projeto_agpi.Views
                         sqlConnection.Close();
                     }
                 }
-                MessageBox.Show("Usuário cadastrado com sucesso", "Aviso!", MessageBoxButtons.OK);
+                MessageBox.Show("Consulta Agendada!", "Aviso!", MessageBoxButtons.OK);
             }
             catch (Exception e)
             {
-                MessageBox.Show("Usuário não cadastrado", "Erro");
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK);
 
             }
         }

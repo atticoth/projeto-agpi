@@ -86,6 +86,8 @@ namespace projeto_agpi.Views
         {
             // TODO: This line of code loads data into the 'dB_AGPIDataSet.tbl_Triagem' table. You can move, or remove it, as needed.
             this.tbl_TriagemTableAdapter.Fill(this.dB_AGPIDataSet.tbl_Triagem);
+            // TODO: This line of code loads data into the 'dB_AGPIDataSet.tbl_Triagem' table. You can move, or remove it, as needed.
+            this.tbl_TriagemTableAdapter.Fill(this.dB_AGPIDataSet.tbl_Triagem);
             LoadConsultas();
         }
 

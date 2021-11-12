@@ -29,9 +29,9 @@ namespace projeto_agpi.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_RG = new System.Windows.Forms.TextBox();
+            this.txt_Temperatura = new System.Windows.Forms.TextBox();
             this.lbl_Temperatura = new System.Windows.Forms.Label();
-            this.txt_CPF = new System.Windows.Forms.TextBox();
+            this.txt_Pressao = new System.Windows.Forms.TextBox();
             this.txt_NomePaciente = new System.Windows.Forms.TextBox();
             this.lbl_Pressão = new System.Windows.Forms.Label();
             this.lbl_Nome = new System.Windows.Forms.Label();
@@ -39,19 +39,19 @@ namespace projeto_agpi.Views
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txt_PesquisaCPF = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMotivoConsulta = new System.Windows.Forms.TextBox();
+            this.txt_Observacoes = new System.Windows.Forms.TextBox();
             this.lbl_Observacoes = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Saturacao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txt_RG
+            // txt_Temperatura
             // 
-            this.txt_RG.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_RG.Location = new System.Drawing.Point(190, 151);
-            this.txt_RG.Name = "txt_RG";
-            this.txt_RG.Size = new System.Drawing.Size(255, 26);
-            this.txt_RG.TabIndex = 78;
+            this.txt_Temperatura.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Temperatura.Location = new System.Drawing.Point(190, 151);
+            this.txt_Temperatura.Name = "txt_Temperatura";
+            this.txt_Temperatura.Size = new System.Drawing.Size(255, 26);
+            this.txt_Temperatura.TabIndex = 78;
             // 
             // lbl_Temperatura
             // 
@@ -63,13 +63,13 @@ namespace projeto_agpi.Views
             this.lbl_Temperatura.TabIndex = 77;
             this.lbl_Temperatura.Text = "Temperatura:";
             // 
-            // txt_CPF
+            // txt_Pressao
             // 
-            this.txt_CPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CPF.Location = new System.Drawing.Point(190, 113);
-            this.txt_CPF.Name = "txt_CPF";
-            this.txt_CPF.Size = new System.Drawing.Size(255, 26);
-            this.txt_CPF.TabIndex = 76;
+            this.txt_Pressao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Pressao.Location = new System.Drawing.Point(190, 113);
+            this.txt_Pressao.Name = "txt_Pressao";
+            this.txt_Pressao.Size = new System.Drawing.Size(255, 26);
+            this.txt_Pressao.TabIndex = 76;
             // 
             // txt_NomePaciente
             // 
@@ -110,6 +110,7 @@ namespace projeto_agpi.Views
             this.btn_Salvar.TabIndex = 85;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = false;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // btnPesquisar
             // 
@@ -121,6 +122,7 @@ namespace projeto_agpi.Views
             this.btnPesquisar.TabIndex = 88;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txt_PesquisaCPF
             // 
@@ -140,14 +142,14 @@ namespace projeto_agpi.Views
             this.label4.TabIndex = 86;
             this.label4.Text = "CPF Paciente:";
             // 
-            // txtMotivoConsulta
+            // txt_Observacoes
             // 
-            this.txtMotivoConsulta.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMotivoConsulta.Location = new System.Drawing.Point(190, 228);
-            this.txtMotivoConsulta.Multiline = true;
-            this.txtMotivoConsulta.Name = "txtMotivoConsulta";
-            this.txtMotivoConsulta.Size = new System.Drawing.Size(255, 98);
-            this.txtMotivoConsulta.TabIndex = 90;
+            this.txt_Observacoes.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Observacoes.Location = new System.Drawing.Point(190, 228);
+            this.txt_Observacoes.Multiline = true;
+            this.txt_Observacoes.Name = "txt_Observacoes";
+            this.txt_Observacoes.Size = new System.Drawing.Size(255, 98);
+            this.txt_Observacoes.TabIndex = 90;
             // 
             // lbl_Observacoes
             // 
@@ -159,13 +161,13 @@ namespace projeto_agpi.Views
             this.lbl_Observacoes.TabIndex = 89;
             this.lbl_Observacoes.Text = "Observações:";
             // 
-            // textBox1
+            // txt_Saturacao
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(190, 189);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 26);
-            this.textBox1.TabIndex = 92;
+            this.txt_Saturacao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Saturacao.Location = new System.Drawing.Point(190, 189);
+            this.txt_Saturacao.Name = "txt_Saturacao";
+            this.txt_Saturacao.Size = new System.Drawing.Size(255, 26);
+            this.txt_Saturacao.TabIndex = 92;
             // 
             // label1
             // 
@@ -182,17 +184,17 @@ namespace projeto_agpi.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 423);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Saturacao);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtMotivoConsulta);
+            this.Controls.Add(this.txt_Observacoes);
             this.Controls.Add(this.lbl_Observacoes);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txt_PesquisaCPF);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_Salvar);
-            this.Controls.Add(this.txt_RG);
+            this.Controls.Add(this.txt_Temperatura);
             this.Controls.Add(this.lbl_Temperatura);
-            this.Controls.Add(this.txt_CPF);
+            this.Controls.Add(this.txt_Pressao);
             this.Controls.Add(this.txt_NomePaciente);
             this.Controls.Add(this.lbl_Pressão);
             this.Controls.Add(this.lbl_Nome);
@@ -206,9 +208,9 @@ namespace projeto_agpi.Views
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_RG;
+        private System.Windows.Forms.TextBox txt_Temperatura;
         private System.Windows.Forms.Label lbl_Temperatura;
-        private System.Windows.Forms.TextBox txt_CPF;
+        private System.Windows.Forms.TextBox txt_Pressao;
         private System.Windows.Forms.TextBox txt_NomePaciente;
         private System.Windows.Forms.Label lbl_Pressão;
         private System.Windows.Forms.Label lbl_Nome;
@@ -216,9 +218,9 @@ namespace projeto_agpi.Views
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txt_PesquisaCPF;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMotivoConsulta;
+        private System.Windows.Forms.TextBox txt_Observacoes;
         private System.Windows.Forms.Label lbl_Observacoes;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Saturacao;
         private System.Windows.Forms.Label label1;
     }
 }
