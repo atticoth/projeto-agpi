@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projeto_agpi.Views
@@ -17,9 +11,12 @@ namespace projeto_agpi.Views
         public int CodPacien;
         public int CodAgendamento;
 
-        public frm_NewTriagem()
+        int meuID;
+        public frm_NewTriagem(int Id)
         {
+            meuID = Id;
             InitializeComponent();
+            
         }
 
         public static SqlConnection Connection()
@@ -61,7 +58,7 @@ namespace projeto_agpi.Views
         {
             string cpfPesquisar = txt_PesquisaCPF.Text;
 
-            string Comando = String.Format("SELECT P.[CodPacien], P.[Nome], CA.CodAgendamento FROM tbl_Paciente P LEFT JOIN tbl_ConsultaAgendada CA ON P.CodPacien = CA.Cod_Pacien_FK WHERE [CPF] = '{0}'", cpfPesquisar);
+            string Comando = String.Format("SELECT P.[CodPacien], P.[Nome], CA.CodAgendamento FROM tbl_Paciente P LEFT JOIN tbl_ConsultaAgendada CA ON P.CodPacien = CA.Cod_Pacien_FK WHERE P.[CPF] = '{0}'", cpfPesquisar);
 
             SelectPaciente(Comando);
 
@@ -81,7 +78,7 @@ namespace projeto_agpi.Views
                         sqlConnection.Close();
                     }
                 }
-                MessageBox.Show("Salvo com sucesoo!", "Aviso!", MessageBoxButtons.OK);
+                MessageBox.Show("Salvo com sucesso!", "Aviso!", MessageBoxButtons.OK);
             }
             catch (Exception e)
             {

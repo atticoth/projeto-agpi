@@ -185,13 +185,7 @@ namespace projeto_agpi
             OpenChildForm(new frm_Agendamento());
         }
 
-        private void btnTriagem_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new frm_Triagem());
-        }
-
-        private void btnMédico_Click(object sender, EventArgs e)
+        private void btnAtendimento_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new frm_Consulta());

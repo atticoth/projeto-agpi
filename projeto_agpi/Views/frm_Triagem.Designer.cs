@@ -39,6 +39,8 @@ namespace projeto_agpi.Views
             this.txt_PesquisaCPF = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bnNovoItem = new System.Windows.Forms.ToolStripButton();
+            this.tblTriagemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_AGPIDataSet = new projeto_agpi.DB_AGPIDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,16 +50,14 @@ namespace projeto_agpi.Views
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dB_AGPIDataSet = new projeto_agpi.DB_AGPIDataSet();
-            this.tblTriagemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_TriagemTableAdapter = new projeto_agpi.DB_AGPIDataSetTableAdapters.tbl_TriagemTableAdapter();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgConsulta)).BeginInit();
             this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTriagemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGrid
@@ -148,7 +148,7 @@ namespace projeto_agpi.Views
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(263, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(232, 25);
             this.bindingNavigator1.TabIndex = 63;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -161,6 +161,16 @@ namespace projeto_agpi.Views
             this.bnNovoItem.Size = new System.Drawing.Size(23, 22);
             this.bnNovoItem.Text = "Novo Item";
             this.bnNovoItem.Click += new System.EventHandler(this.bnNovoItem_Click);
+            // 
+            // tblTriagemBindingSource
+            // 
+            this.tblTriagemBindingSource.DataMember = "tbl_Triagem";
+            this.tblTriagemBindingSource.DataSource = this.dB_AGPIDataSet;
+            // 
+            // dB_AGPIDataSet
+            // 
+            this.dB_AGPIDataSet.DataSetName = "DB_AGPIDataSet";
+            this.dB_AGPIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -230,16 +240,6 @@ namespace projeto_agpi.Views
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // dB_AGPIDataSet
-            // 
-            this.dB_AGPIDataSet.DataSetName = "DB_AGPIDataSet";
-            this.dB_AGPIDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblTriagemBindingSource
-            // 
-            this.tblTriagemBindingSource.DataMember = "tbl_Triagem";
-            this.tblTriagemBindingSource.DataSource = this.dB_AGPIDataSet;
-            // 
             // tbl_TriagemTableAdapter
             // 
             this.tbl_TriagemTableAdapter.ClearBeforeFill = true;
@@ -263,8 +263,8 @@ namespace projeto_agpi.Views
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTriagemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_AGPIDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,3 +41,4 @@ C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\bi
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\bin\Debug\Infragistics4.Win.UltraWinStatusBar.v19.1.xml
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.exe
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.pdb
+C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.Views.frm_Consulta.resources

@@ -30,8 +30,7 @@ namespace projeto_agpi
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnMédico = new FontAwesome.Sharp.IconButton();
-            this.btnTriagem = new FontAwesome.Sharp.IconButton();
+            this.btnAtendimento = new FontAwesome.Sharp.IconButton();
             this.btnConsultas = new FontAwesome.Sharp.IconButton();
             this.btnPaciente = new FontAwesome.Sharp.IconButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -56,62 +55,38 @@ namespace projeto_agpi
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.pnlMenu.Controls.Add(this.btnMédico);
-            this.pnlMenu.Controls.Add(this.btnTriagem);
+            this.pnlMenu.Controls.Add(this.btnAtendimento);
             this.pnlMenu.Controls.Add(this.btnConsultas);
             this.pnlMenu.Controls.Add(this.btnPaciente);
             this.pnlMenu.Controls.Add(this.pnlLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(250, 661);
+            this.pnlMenu.Size = new System.Drawing.Size(250, 547);
             this.pnlMenu.TabIndex = 0;
             // 
-            // btnMédico
+            // btnAtendimento
             // 
-            this.btnMédico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMédico.FlatAppearance.BorderSize = 0;
-            this.btnMédico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMédico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMédico.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMédico.IconChar = FontAwesome.Sharp.IconChar.UserMd;
-            this.btnMédico.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnMédico.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMédico.IconSize = 38;
-            this.btnMédico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMédico.Location = new System.Drawing.Point(0, 280);
-            this.btnMédico.Name = "btnMédico";
-            this.btnMédico.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMédico.Size = new System.Drawing.Size(250, 60);
-            this.btnMédico.TabIndex = 5;
-            this.btnMédico.Text = " Médico";
-            this.btnMédico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMédico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMédico.UseVisualStyleBackColor = true;
-            this.btnMédico.Click += new System.EventHandler(this.btnMédico_Click);
-            // 
-            // btnTriagem
-            // 
-            this.btnTriagem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTriagem.FlatAppearance.BorderSize = 0;
-            this.btnTriagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTriagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTriagem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTriagem.IconChar = FontAwesome.Sharp.IconChar.Stethoscope;
-            this.btnTriagem.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnTriagem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTriagem.IconSize = 38;
-            this.btnTriagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTriagem.Location = new System.Drawing.Point(0, 220);
-            this.btnTriagem.Name = "btnTriagem";
-            this.btnTriagem.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnTriagem.Size = new System.Drawing.Size(250, 60);
-            this.btnTriagem.TabIndex = 4;
-            this.btnTriagem.Text = " Triagem";
-            this.btnTriagem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTriagem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTriagem.UseVisualStyleBackColor = true;
-            this.btnTriagem.Click += new System.EventHandler(this.btnTriagem_Click);
+            this.btnAtendimento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAtendimento.FlatAppearance.BorderSize = 0;
+            this.btnAtendimento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtendimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtendimento.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAtendimento.IconChar = FontAwesome.Sharp.IconChar.UserMd;
+            this.btnAtendimento.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAtendimento.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAtendimento.IconSize = 38;
+            this.btnAtendimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtendimento.Location = new System.Drawing.Point(0, 220);
+            this.btnAtendimento.Name = "btnAtendimento";
+            this.btnAtendimento.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnAtendimento.Size = new System.Drawing.Size(250, 60);
+            this.btnAtendimento.TabIndex = 5;
+            this.btnAtendimento.Text = " Atendimento";
+            this.btnAtendimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtendimento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtendimento.UseVisualStyleBackColor = true;
+            this.btnAtendimento.Click += new System.EventHandler(this.btnAtendimento_Click);
             // 
             // btnConsultas
             // 
@@ -196,7 +171,7 @@ namespace projeto_agpi
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitleBar.Location = new System.Drawing.Point(250, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(1084, 75);
+            this.pnlTitleBar.Size = new System.Drawing.Size(970, 75);
             this.pnlTitleBar.TabIndex = 1;
             this.pnlTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseDown);
             // 
@@ -206,7 +181,7 @@ namespace projeto_agpi
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblUserName.Location = new System.Drawing.Point(941, 43);
+            this.lblUserName.Location = new System.Drawing.Point(827, 43);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(54, 24);
             this.lblUserName.TabIndex = 5;
@@ -223,7 +198,7 @@ namespace projeto_agpi
             this.btnMinimize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 25;
-            this.btnMinimize.Location = new System.Drawing.Point(992, -2);
+            this.btnMinimize.Location = new System.Drawing.Point(878, -2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(32, 31);
             this.btnMinimize.TabIndex = 4;
@@ -241,7 +216,7 @@ namespace projeto_agpi
             this.btnMaximize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 25;
-            this.btnMaximize.Location = new System.Drawing.Point(1020, -2);
+            this.btnMaximize.Location = new System.Drawing.Point(906, -2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(32, 31);
             this.btnMaximize.TabIndex = 3;
@@ -259,7 +234,7 @@ namespace projeto_agpi
             this.btnClose.IconColor = System.Drawing.Color.Gainsboro;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 25;
-            this.btnClose.Location = new System.Drawing.Point(1049, -2);
+            this.btnClose.Location = new System.Drawing.Point(935, -2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(32, 31);
             this.btnClose.TabIndex = 2;
@@ -298,7 +273,7 @@ namespace projeto_agpi
             this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDesktop.Location = new System.Drawing.Point(250, 75);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(1084, 586);
+            this.pnlDesktop.Size = new System.Drawing.Size(970, 472);
             this.pnlDesktop.TabIndex = 2;
             // 
             // label1
@@ -306,7 +281,7 @@ namespace projeto_agpi
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bookman Old Style", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(441, 230);
+            this.label1.Location = new System.Drawing.Point(393, 216);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 78);
             this.label1.TabIndex = 1;
@@ -318,14 +293,14 @@ namespace projeto_agpi
             this.pnlShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlShadow.Location = new System.Drawing.Point(250, 75);
             this.pnlShadow.Name = "pnlShadow";
-            this.pnlShadow.Size = new System.Drawing.Size(1084, 9);
+            this.pnlShadow.Size = new System.Drawing.Size(970, 9);
             this.pnlShadow.TabIndex = 3;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 661);
+            this.ClientSize = new System.Drawing.Size(1220, 547);
             this.Controls.Add(this.pnlShadow);
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.pnlTitleBar);
@@ -362,8 +337,7 @@ namespace projeto_agpi
         private FontAwesome.Sharp.IconButton btnMaximize;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUserName;
-        private FontAwesome.Sharp.IconButton btnTriagem;
-        private FontAwesome.Sharp.IconButton btnMédico;
+        private FontAwesome.Sharp.IconButton btnAtendimento;
     }
 }
 
