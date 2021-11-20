@@ -70,15 +70,6 @@ namespace projeto_agpi
 
                 userName = dataTable.Rows[0].ItemArray[0].ToString();
                 lblUserName.Text = userName;
-
-                //if (dataTable.Rows.Count > 0)
-                //{
-                    
-                //}
-                //else
-                //{
-
-                //}
             }
             catch (SqlException ex)
             {

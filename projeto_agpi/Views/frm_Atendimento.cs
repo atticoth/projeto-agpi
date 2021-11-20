@@ -5,18 +5,19 @@ using System.Windows.Forms;
 
 namespace projeto_agpi.Views
 {
-    public partial class frm_NewTriagem : Form
+    public partial class frm_Atendimento : Form
     {
         public string Nome;
         public int CodPacien;
         public int CodAgendamento;
 
         int meuID;
-        public frm_NewTriagem(int Id)
+        public frm_Atendimento(int Id)
         {
             meuID = Id;
             InitializeComponent();
             
+
         }
 
         public static SqlConnection Connection()

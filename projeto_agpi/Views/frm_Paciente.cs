@@ -13,6 +13,8 @@ namespace projeto_agpi.Views
 {
     public partial class frm_Paciente : Form
     {
+        SqlConnection objConect = frm_Main.Connection();
+        SqlCommand objCommand = null;
         public string nomePaciente;
 
         public frm_Paciente()
@@ -20,16 +22,9 @@ namespace projeto_agpi.Views
             InitializeComponent();
         }
 
-        private string _strConn = @"Data Source = ITLNB064A\SQL2017; Initial Catalog = DB_AGPI; Integrated Security = True";
-
-        SqlConnection objConect = null;
-        SqlCommand objCommand = null;
-
         private void LoadConsultas()
         {
-            string Comando = @"DEFAULT_SELECT_PACIENTE";
-
-            objConect = new SqlConnection(_strConn);
+            string Comando = @"DEFAULT_SELECT_PACIENTE";            
             objCommand = new SqlCommand(Comando, objConect);
 
             try
@@ -47,11 +42,11 @@ namespace projeto_agpi.Views
             }
         }
 
-        private void SelectPaciente(string Comando)
+        private void SelectPaciente(string cpfPaciente)
         {
-
-            objConect = new SqlConnection(_strConn);
-            objCommand = new SqlCommand(Comando, objConect);
+            objCommand = new SqlCommand("DEFAULT_SELECT_PACIENTE_CPF", objConect);
+            objCommand.CommandType = CommandType.StoredProcedure;
+            objCommand.Parameters.Add(new SqlParameter("@CPF", cpfPaciente));
 
             try
             {
@@ -72,17 +67,11 @@ namespace projeto_agpi.Views
         {
             string cpfPesquisar = txt_PesquisaCPF.Text;
 
-            string Comando = String.Format("SELECT [Nome], [DataNascimento], [CPF], [RG], [Convenio], [Telefone], [Celular], [Email], [Endereco] FROM tbl_Paciente WHERE [CPF] = '{0}'", cpfPesquisar);
-
-            if (txt_PesquisaCPF.Text != " ")
-            {
-                SelectPaciente(Comando);
-
-            }
-            else
-            {
+            if (txt_PesquisaCPF.Text == null)
                 LoadConsultas();
-            }
+            else
+                SelectPaciente(cpfPesquisar);
+            
         }
         private void frm_Paciente_Load(object sender, EventArgs e)
         {

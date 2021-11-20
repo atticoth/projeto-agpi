@@ -59,5 +59,15 @@ namespace projeto_agpi.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grayicons__45_ {
+            get {
+                object obj = ResourceManager.GetObject("grayicons__45_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

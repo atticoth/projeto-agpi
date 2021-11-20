@@ -83,6 +83,7 @@ namespace projeto_agpi.Views
             this.btnPesquisar.TabIndex = 58;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // label4
             // 
@@ -148,7 +149,7 @@ namespace projeto_agpi.Views
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(263, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(232, 25);
             this.bindingNavigator1.TabIndex = 62;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 

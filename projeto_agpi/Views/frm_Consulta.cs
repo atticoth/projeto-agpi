@@ -16,6 +16,7 @@ namespace projeto_agpi.Views
         public frm_Consulta()
         {
             InitializeComponent();
+            this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
         }
 
         private string _strConn = @"Data Source = ITLNB064A\SQL2017; Initial Catalog = DB_AGPI; Integrated Security = True";
@@ -37,7 +38,8 @@ namespace projeto_agpi.Views
 
                 objAdp.Fill(DtUser);
 
-                dgConsulta.DataSource = DtUser;
+                ugConsulta.DataSource = DtUser;
+                ConfigGrid();
             }
             catch (Exception e)
             {
@@ -50,6 +52,24 @@ namespace projeto_agpi.Views
             // TODO: This line of code loads data into the 'dB_AGPIDataSet.tbl_ConsultaAgendada' table. You can move, or remove it, as needed.
             //this.tbl_ConsultaAgendadaTableAdapter.Fill(this.dB_AGPIDataSet.tbl_ConsultaAgendada);
             LoadConsultas();
+            ConfigGrid();
+        }
+
+        private void ConfigGrid()
+        {
+            if (!ugConsulta.DisplayLayout.Bands[0].Columns.Exists("AbrePopup"))
+            {
+                ugConsulta.DisplayLayout.Bands[0].Columns.Add("AbrePopup", "Triagem");
+            }
+
+            ugConsulta.DisplayLayout.Override.AllowUpdate = Infragistics.Win.DefaultableBoolean.True;
+            ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
+            ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always;
+            ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].Header.VisiblePosition = 8;
+            ugConsulta.DisplayLayout.Override.CellButtonAppearance.Image = Properties.Resources.grayicons__45_;
+            ugConsulta.DisplayLayout.Override.CellButtonAppearance.ImageHAlign = Infragistics.Win.HAlign.Center;
+            ugConsulta.DisplayLayout.Override.CellButtonAppearance.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect;
         }
 
         private void bnNovoItem_Click(object sender, EventArgs e)
@@ -60,10 +80,12 @@ namespace projeto_agpi.Views
             //LoadConsultas();
         }
 
-        private void dgConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ugConsulta_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
         {
-            var NovoDetalhe = new frm_NewTriagem((int)dgConsulta.SelectedCells[0].Value);
+            var NovoDetalhe = new frm_Atendimento((int)ugConsulta.ActiveRow.Cells["CodigoPaciente"].Value);
             NovoDetalhe.ShowDialog();
+
+            LoadConsultas();
         }
     }
 }

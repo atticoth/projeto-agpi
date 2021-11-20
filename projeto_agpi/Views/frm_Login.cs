@@ -20,23 +20,21 @@ namespace projeto_agpi.Views
             InitializeComponent();
         }
 
-        public static SqlConnection Connection()
-        {
-            return new SqlConnection(@"Data Source = ITLNB064A\SQL2017; Initial Catalog = DB_AGPI; Integrated Security = True");
-        }
-
-        public bool SelectLogin(string Comando)
+        public bool SelectLogin(string username, string password)
         {
             DataTable dataTable = new DataTable();
 
             try
             {
-                using (SqlConnection sqlConnection = Connection())
+                using (SqlConnection sqlConnection = frm_Main.Connection())
                 {
                     sqlConnection.Open();
                     using (SqlCommand sqlComando = sqlConnection.CreateCommand())
                     {
-                        sqlComando.CommandText = Comando;
+                        sqlComando.CommandText = "DEFAULT_SELECT_LOGIN_USER";
+                        sqlComando.CommandType = CommandType.StoredProcedure;
+                        sqlComando.Parameters.Add(new SqlParameter("@Username", username));
+                        sqlComando.Parameters.Add(new SqlParameter("@Password", password));
                         SqlDataReader reader = sqlComando.ExecuteReader();
 
                         dataTable.Load(reader);
@@ -66,9 +64,7 @@ namespace projeto_agpi.Views
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            string ComandoSQL = String.Format("SELECT [CodID]  FROM [DB_AGPI].[dbo].[tbl_LoginUser] WHERE [User] = '{0}' AND [Senha] = '{1}'", username, password);
-
-            bool Login = SelectLogin(ComandoSQL);
+            bool Login = SelectLogin(username, password);
 
             if (Login)
             {

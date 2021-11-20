@@ -103,11 +103,11 @@
     <Compile Include="Views\frm_NewPaciente.Designer.cs">
       <DependentUpon>frm_NewPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frm_NewTriagem.cs">
+    <Compile Include="Views\frm_Atendimento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frm_NewTriagem.Designer.cs">
-      <DependentUpon>frm_NewTriagem.cs</DependentUpon>
+    <Compile Include="Views\frm_Atendimento.Designer.cs">
+      <DependentUpon>frm_Atendimento.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frm_Paciente.cs">
       <SubType>Form</SubType>
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="Views\frm_NewPaciente.resx">
       <DependentUpon>frm_NewPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frm_NewTriagem.resx">
-      <DependentUpon>frm_NewTriagem.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frm_Atendimento.resx">
+      <DependentUpon>frm_Atendimento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frm_Paciente.resx">
       <DependentUpon>frm_Paciente.cs</DependentUpon>
@@ -184,6 +184,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\grayicons %2845%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
