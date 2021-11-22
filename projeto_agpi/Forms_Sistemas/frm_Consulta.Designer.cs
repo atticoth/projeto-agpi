@@ -1,7 +1,7 @@
 ﻿
-namespace projeto_agpi.Views
+namespace projeto_agpi.Forms_Sistemas
 {
-    partial class frm_Consulta_New
+    partial class frm_Consulta
     {
         /// <summary>
         /// Required designer variable.
@@ -38,15 +38,19 @@ namespace projeto_agpi.Views
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            this.pnlTitle.SuspendLayout();
             this.pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ugConsulta)).BeginInit();
-            this.pnlTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // pnlTitle
+            // 
+            this.pnlTitle.Size = new System.Drawing.Size(800, 78);
+            // 
             // pnlGrid
             // 
-            this.pnlGrid.Size = new System.Drawing.Size(800, 345);
+            this.pnlGrid.Size = new System.Drawing.Size(800, 341);
             // 
             // ugConsulta
             // 
@@ -92,27 +96,22 @@ namespace projeto_agpi.Views
             this.ugConsulta.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.ugConsulta.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ugConsulta.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.ugConsulta.Size = new System.Drawing.Size(800, 345);
+            this.ugConsulta.Size = new System.Drawing.Size(800, 341);
             this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
             // 
-            // pnlTitle
-            // 
-            this.pnlTitle.Size = new System.Drawing.Size(800, 78);
-            // 
-            // frm_Consulta_New
+            // frm_Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frm_Consulta_New";
-            this.Text = "frm_Consulta_New";
-            this.pnlGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ugConsulta)).EndInit();
+            this.Name = "frm_Consulta";
+            this.Text = "frm_Consulta";
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
+            this.pnlGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ugConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

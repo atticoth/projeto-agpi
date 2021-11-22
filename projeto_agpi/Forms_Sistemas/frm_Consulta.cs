@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projeto_agpi.Views
+namespace projeto_agpi.Forms_Sistemas
 {
-    partial class frm_Consulta_New : Forms_Default.frm_Consulta_Mod
+    partial class frm_Consulta : Forms_Default.frm_Consulta_Mod
     {
-        public frm_Consulta_New() : base("DEFAULT_SELECT_CONSULTA_AGENDADA", true, Forms_Default.GridMode.Infragistics)
+        public frm_Consulta() : base ("DEFAULT_SELECT_CONSULTA_AGENDADA", true, Forms_Default.GridMode.Infragistics)
         {
             InitializeComponent();
             this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
@@ -23,13 +23,13 @@ namespace projeto_agpi.Views
         {
             if (!ugConsulta.DisplayLayout.Bands[0].Columns.Exists("AbrePopup"))
             {
-                ugConsulta.DisplayLayout.Bands[0].Columns.Add("AbrePopup", "Triagem");
+                ugConsulta.DisplayLayout.Bands[0].Columns.Add("AbrePopup", "Detalhes");
             }
 
             ugConsulta.DisplayLayout.Override.AllowUpdate = Infragistics.Win.DefaultableBoolean.True;
             ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
             ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always;
-            ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].Header.VisiblePosition = 8;
+            ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].Header.VisiblePosition = 7;
             ugConsulta.DisplayLayout.Override.CellButtonAppearance.Image = Properties.Resources.grayicons__45_;
             ugConsulta.DisplayLayout.Override.CellButtonAppearance.ImageHAlign = Infragistics.Win.HAlign.Center;
             ugConsulta.DisplayLayout.Override.CellButtonAppearance.ImageVAlign = Infragistics.Win.VAlign.Middle;
@@ -43,9 +43,7 @@ namespace projeto_agpi.Views
 
         private void ugConsulta_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
         {
-            var NovoDetalhe = new frm_Atendimento((int)ugConsulta.ActiveRow.Cells["CodigoPaciente"].Value);
-            NovoDetalhe.ShowDialog();
-            LoadData();
+
         }
     }
 }

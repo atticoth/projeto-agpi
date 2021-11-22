@@ -78,11 +78,17 @@
     <Compile Include="Forms_Sistemas\frm_Agendar_Consulta.Designer.cs">
       <DependentUpon>frm_Agendar_Consulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Sistemas\frm_Consulta_New.cs">
+    <Compile Include="Forms_Sistemas\frm_Atendimento_Medico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms_Sistemas\frm_Consulta_New.Designer.cs">
-      <DependentUpon>frm_Consulta_New.cs</DependentUpon>
+    <Compile Include="Forms_Sistemas\frm_Atendimento_Medico.Designer.cs">
+      <DependentUpon>frm_Atendimento_Medico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Sistemas\frm_Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Sistemas\frm_Consulta.Designer.cs">
+      <DependentUpon>frm_Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms_Sistemas\frm_Login.cs">
       <SubType>Form</SubType>
@@ -104,12 +110,6 @@
     <Compile Include="Forms_Sistemas\frm_NewPaciente.Designer.cs">
       <DependentUpon>frm_NewPaciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms_Sistemas\frm_Atendimento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms_Sistemas\frm_Atendimento.Designer.cs">
-      <DependentUpon>frm_Atendimento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms_Sistemas\frm_Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,12 +119,15 @@
     <EmbeddedResource Include="Forms_Default\frm_Consulta_Mod.resx">
       <DependentUpon>frm_Consulta_Mod.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Sistemas\frm_Atendimento_Medico.resx">
+      <DependentUpon>frm_Atendimento_Medico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Sistemas\frm_Consulta.resx">
+      <DependentUpon>frm_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Forms_Sistemas\frm_Agendar_Consulta.resx">
       <DependentUpon>frm_Agendar_Consulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Sistemas\frm_Consulta_New.resx">
-      <DependentUpon>frm_Consulta_New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Sistemas\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -145,9 +148,6 @@
     <EmbeddedResource Include="Forms_Sistemas\frm_NewPaciente.resx">
       <DependentUpon>frm_NewPaciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms_Sistemas\frm_Atendimento.resx">
-      <DependentUpon>frm_Atendimento.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -164,6 +164,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\grayicons %2845%29.png" />
+    <None Include="Resources\saveredmini.png" />
+    <None Include="Resources\redIcons %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

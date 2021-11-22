@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using projeto_agpi.Forms_Sistemas;
 using projeto_agpi.Views;
 
 namespace projeto_agpi
@@ -179,7 +180,7 @@ namespace projeto_agpi
         private void btnAtendimento_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new frm_Consulta_New());
+            OpenChildForm(new frm_Consulta());
         }
 
         private void btnClose_Click(object sender, EventArgs e)

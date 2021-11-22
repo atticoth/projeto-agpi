@@ -1,7 +1,7 @@
 ﻿
 namespace projeto_agpi.Views
 {
-    partial class frm_Agendamento
+    partial class frm_Agendamento : Forms_Default.frm_Consulta_Mod
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace projeto_agpi.Views
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frm_Agendamento_New";
+            this.Text = "frm_Agendamento";
         }
 
         #endregion

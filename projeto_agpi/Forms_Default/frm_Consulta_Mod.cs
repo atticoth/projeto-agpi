@@ -19,7 +19,7 @@ namespace projeto_agpi.Forms_Default
 
     public partial class frm_Consulta_Mod : Form
     {
-        //private DataSet myDataSet;
+        private DataSet myDataSet;
         protected string strProc;
         protected bool blnAutoExec;
 
@@ -45,11 +45,25 @@ namespace projeto_agpi.Forms_Default
             return null;
         }
 
+        protected virtual SqlCommand ProcedureSave()
+        {
+            return null;
+        }
+
         protected void LoadData(List<SqlParameter> param = null)
         {
             try
             {
-                this.ugConsulta.DataSource = this.bdSource;
+                if (ViewMode == GridMode.DatagridView)
+                {
+                    this.dataGridView1.DataSource = this.bdSource;
+                    ugConsulta.Visible = false;
+                }
+                else
+                {
+                    this.ugConsulta.DataSource = this.bdSource;
+                    dataGridView1.Visible = false;
+                }
 
                 SqlCommand objCommand = new SqlCommand(strProc, frm_Main.Connection());
                 SqlDataAdapter objAdp = new SqlDataAdapter(objCommand);
@@ -80,25 +94,22 @@ namespace projeto_agpi.Forms_Default
             if (blnAutoExec)
                 LoadData(Filtros());
             else
-                ugConsulta.DataSource = null;
-        }
-
-        protected void AdicionarNovaLinha()
-        {
-            if (ViewMode == GridMode.Infragistics)
-            {
-                ugConsulta.DisplayLayout.Bands[0].AddNew();
-            }
-        }
-
-        protected virtual void bnNovoItem_Click(object sender, EventArgs e)
-        {
-            AdicionarNovaLinha();
+                dataGridView1.DataSource = null;
         }
 
         private void frm_Consulta_Mod_Load(object sender, EventArgs e)
         {
             LerForm();
+        }
+
+        protected virtual void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected virtual void tsbn_NewRow_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
