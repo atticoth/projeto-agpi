@@ -1,7 +1,9 @@
 ﻿
-namespace projeto_agpi.Views
+using System.Windows.Forms;
+
+namespace projeto_agpi.Forms_Default
 {
-    partial class frm_Consulta
+    partial class frm_Consulta_Mod
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +32,7 @@ namespace projeto_agpi.Views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Consulta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Consulta_Mod));
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
@@ -43,12 +45,7 @@ namespace projeto_agpi.Views
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            this.pnlGrid = new System.Windows.Forms.Panel();
-            this.pnlTitle = new System.Windows.Forms.Panel();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_PesquisaCPF = new System.Windows.Forms.TextBox();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bdNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bnNovoItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -59,75 +56,29 @@ namespace projeto_agpi.Views
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.pnlGrid = new System.Windows.Forms.Panel();
             this.ugConsulta = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.pnlTitle = new System.Windows.Forms.Panel();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_PesquisaCPF = new System.Windows.Forms.TextBox();
+            this.bdSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bdNavigator)).BeginInit();
+            this.bdNavigator.SuspendLayout();
             this.pnlGrid.SuspendLayout();
-            this.pnlTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ugConsulta)).BeginInit();
+            this.pnlTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlGrid
+            // bdNavigator
             // 
-            this.pnlGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlGrid.Controls.Add(this.ugConsulta);
-            this.pnlGrid.Location = new System.Drawing.Point(0, 95);
-            this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1074, 386);
-            this.pnlGrid.TabIndex = 62;
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTitle.Controls.Add(this.btnPesquisar);
-            this.pnlTitle.Controls.Add(this.label4);
-            this.pnlTitle.Controls.Add(this.txt_PesquisaCPF);
-            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1074, 96);
-            this.pnlTitle.TabIndex = 64;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(427, 36);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(90, 34);
-            this.btnPesquisar.TabIndex = 58;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(82, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 18);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "CPF Paciente:";
-            // 
-            // txt_PesquisaCPF
-            // 
-            this.txt_PesquisaCPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_PesquisaCPF.Location = new System.Drawing.Point(218, 41);
-            this.txt_PesquisaCPF.Name = "txt_PesquisaCPF";
-            this.txt_PesquisaCPF.Size = new System.Drawing.Size(188, 26);
-            this.txt_PesquisaCPF.TabIndex = 46;
-            // 
-            // bindingNavigator1
-            // 
-            this.bindingNavigator1.AddNewItem = this.bnNovoItem;
-            this.bindingNavigator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bdNavigator.AddNewItem = this.bnNovoItem;
+            this.bdNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bdNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.bdNavigator.DeleteItem = null;
+            this.bdNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.bdNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -138,16 +89,16 @@ namespace projeto_agpi.Views
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bnNovoItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 487);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(232, 25);
-            this.bindingNavigator1.TabIndex = 64;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bdNavigator.Location = new System.Drawing.Point(0, 487);
+            this.bdNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bdNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bdNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bdNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bdNavigator.Name = "bdNavigator";
+            this.bdNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.bdNavigator.Size = new System.Drawing.Size(232, 25);
+            this.bdNavigator.TabIndex = 64;
+            this.bdNavigator.Text = "bindingNavigator1";
             // 
             // bnNovoItem
             // 
@@ -157,6 +108,7 @@ namespace projeto_agpi.Views
             this.bnNovoItem.RightToLeftAutoMirrorImage = true;
             this.bnNovoItem.Size = new System.Drawing.Size(23, 22);
             this.bnNovoItem.Text = "Novo Item";
+            this.bnNovoItem.Click += new System.EventHandler(this.bnNovoItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -226,6 +178,17 @@ namespace projeto_agpi.Views
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // pnlGrid
+            // 
+            this.pnlGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlGrid.Controls.Add(this.ugConsulta);
+            this.pnlGrid.Location = new System.Drawing.Point(0, 77);
+            this.pnlGrid.Name = "pnlGrid";
+            this.pnlGrid.Size = new System.Drawing.Size(1074, 407);
+            this.pnlGrid.TabIndex = 63;
+            // 
             // ugConsulta
             // 
             appearance1.BackColor = System.Drawing.SystemColors.Window;
@@ -285,32 +248,71 @@ namespace projeto_agpi.Views
             this.ugConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ugConsulta.Location = new System.Drawing.Point(0, 0);
             this.ugConsulta.Name = "ugConsulta";
-            this.ugConsulta.Size = new System.Drawing.Size(1074, 386);
+            this.ugConsulta.Size = new System.Drawing.Size(1074, 407);
             this.ugConsulta.TabIndex = 0;
             this.ugConsulta.Text = "ultraGrid1";
-            this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
             // 
-            // frm_Consulta
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTitle.Controls.Add(this.btnPesquisar);
+            this.pnlTitle.Controls.Add(this.label4);
+            this.pnlTitle.Controls.Add(this.txt_PesquisaCPF);
+            this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(1074, 78);
+            this.pnlTitle.TabIndex = 62;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(412, 19);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(90, 34);
+            this.btnPesquisar.TabIndex = 58;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(67, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 18);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "CPF Paciente:";
+            // 
+            // txt_PesquisaCPF
+            // 
+            this.txt_PesquisaCPF.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PesquisaCPF.Location = new System.Drawing.Point(203, 24);
+            this.txt_PesquisaCPF.Name = "txt_PesquisaCPF";
+            this.txt_PesquisaCPF.Size = new System.Drawing.Size(188, 26);
+            this.txt_PesquisaCPF.TabIndex = 46;
+            // 
+            // frm_Consulta_Mod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 512);
-            this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.pnlTitle);
+            this.Controls.Add(this.bdNavigator);
             this.Controls.Add(this.pnlGrid);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frm_Consulta";
-            this.Text = "frm_Consulta";
-            this.Load += new System.EventHandler(this.frm_Consulta_Load);
+            this.Controls.Add(this.pnlTitle);
+            this.Name = "frm_Consulta_Mod";
+            this.Text = "frm_Consulta_Mod";
+            this.Load += new System.EventHandler(this.frm_Consulta_Mod_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bdNavigator)).EndInit();
+            this.bdNavigator.ResumeLayout(false);
+            this.bdNavigator.PerformLayout();
             this.pnlGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ugConsulta)).EndInit();
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ugConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,22 +320,24 @@ namespace projeto_agpi.Views
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlGrid;
-        private System.Windows.Forms.Panel pnlTitle;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_PesquisaCPF;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton bnNovoItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private Infragistics.Win.UltraWinGrid.UltraGrid ugConsulta;
+        protected System.Windows.Forms.ToolStripButton bnNovoItem;
+        protected System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        protected System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        protected System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        protected System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        protected System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        protected System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        protected System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        protected System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        protected System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        protected System.Windows.Forms.Panel pnlGrid;
+        protected Infragistics.Win.UltraWinGrid.UltraGrid ugConsulta;
+        protected System.Windows.Forms.Panel pnlTitle;
+        protected System.Windows.Forms.Button btnPesquisar;
+        protected System.Windows.Forms.Label label4;
+        protected System.Windows.Forms.TextBox txt_PesquisaCPF;
+        public GridMode ViewMode { get; set; }
+        protected BindingSource bdSource;
+        protected BindingNavigator bdNavigator;
     }
 }

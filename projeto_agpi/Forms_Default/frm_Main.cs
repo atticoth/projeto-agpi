@@ -179,7 +179,7 @@ namespace projeto_agpi
         private void btnAtendimento_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new frm_Consulta());
+            OpenChildForm(new frm_Consulta_New());
         }
 
         private void btnClose_Click(object sender, EventArgs e)

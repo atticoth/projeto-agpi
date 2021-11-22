@@ -62,7 +62,7 @@ namespace projeto_agpi
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(250, 547);
+            this.pnlMenu.Size = new System.Drawing.Size(198, 547);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnAtendimento
@@ -80,7 +80,7 @@ namespace projeto_agpi
             this.btnAtendimento.Location = new System.Drawing.Point(0, 220);
             this.btnAtendimento.Name = "btnAtendimento";
             this.btnAtendimento.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnAtendimento.Size = new System.Drawing.Size(250, 60);
+            this.btnAtendimento.Size = new System.Drawing.Size(198, 60);
             this.btnAtendimento.TabIndex = 5;
             this.btnAtendimento.Text = " Atendimento";
             this.btnAtendimento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,7 +103,7 @@ namespace projeto_agpi
             this.btnConsultas.Location = new System.Drawing.Point(0, 160);
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnConsultas.Size = new System.Drawing.Size(250, 60);
+            this.btnConsultas.Size = new System.Drawing.Size(198, 60);
             this.btnConsultas.TabIndex = 3;
             this.btnConsultas.Text = " Consultas";
             this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,7 +126,7 @@ namespace projeto_agpi
             this.btnPaciente.Location = new System.Drawing.Point(0, 100);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPaciente.Size = new System.Drawing.Size(250, 60);
+            this.btnPaciente.Size = new System.Drawing.Size(198, 60);
             this.btnPaciente.TabIndex = 1;
             this.btnPaciente.Text = " Paciente";
             this.btnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +141,7 @@ namespace projeto_agpi
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(250, 100);
+            this.pnlLogo.Size = new System.Drawing.Size(198, 100);
             this.pnlLogo.TabIndex = 0;
             // 
             // btnHome
@@ -169,9 +169,9 @@ namespace projeto_agpi
             this.pnlTitleBar.Controls.Add(this.lblTitle);
             this.pnlTitleBar.Controls.Add(this.iconCurrentChildForm);
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitleBar.Location = new System.Drawing.Point(250, 0);
+            this.pnlTitleBar.Location = new System.Drawing.Point(198, 0);
             this.pnlTitleBar.Name = "pnlTitleBar";
-            this.pnlTitleBar.Size = new System.Drawing.Size(970, 75);
+            this.pnlTitleBar.Size = new System.Drawing.Size(1022, 69);
             this.pnlTitleBar.TabIndex = 1;
             this.pnlTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitleBar_MouseDown);
             // 
@@ -181,7 +181,7 @@ namespace projeto_agpi
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblUserName.Location = new System.Drawing.Point(827, 43);
+            this.lblUserName.Location = new System.Drawing.Point(784, 5);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(54, 24);
             this.lblUserName.TabIndex = 5;
@@ -198,7 +198,7 @@ namespace projeto_agpi
             this.btnMinimize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 25;
-            this.btnMinimize.Location = new System.Drawing.Point(878, -2);
+            this.btnMinimize.Location = new System.Drawing.Point(930, -2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(32, 31);
             this.btnMinimize.TabIndex = 4;
@@ -216,7 +216,7 @@ namespace projeto_agpi
             this.btnMaximize.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 25;
-            this.btnMaximize.Location = new System.Drawing.Point(906, -2);
+            this.btnMaximize.Location = new System.Drawing.Point(958, -2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(32, 31);
             this.btnMaximize.TabIndex = 3;
@@ -234,7 +234,7 @@ namespace projeto_agpi
             this.btnClose.IconColor = System.Drawing.Color.Gainsboro;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 25;
-            this.btnClose.Location = new System.Drawing.Point(935, -2);
+            this.btnClose.Location = new System.Drawing.Point(987, -2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(32, 31);
             this.btnClose.TabIndex = 2;
@@ -246,7 +246,7 @@ namespace projeto_agpi
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitle.Location = new System.Drawing.Point(63, 33);
+            this.lblTitle.Location = new System.Drawing.Point(63, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(67, 24);
             this.lblTitle.TabIndex = 1;
@@ -260,7 +260,7 @@ namespace projeto_agpi
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconCurrentChildForm.IconSize = 50;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 19);
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 13);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.Size = new System.Drawing.Size(51, 50);
             this.iconCurrentChildForm.TabIndex = 0;
@@ -271,9 +271,9 @@ namespace projeto_agpi
             this.pnlDesktop.BackColor = System.Drawing.Color.LightGray;
             this.pnlDesktop.Controls.Add(this.label1);
             this.pnlDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDesktop.Location = new System.Drawing.Point(250, 75);
+            this.pnlDesktop.Location = new System.Drawing.Point(198, 69);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(970, 472);
+            this.pnlDesktop.Size = new System.Drawing.Size(1022, 478);
             this.pnlDesktop.TabIndex = 2;
             // 
             // label1
@@ -291,9 +291,9 @@ namespace projeto_agpi
             // 
             this.pnlShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
             this.pnlShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlShadow.Location = new System.Drawing.Point(250, 75);
+            this.pnlShadow.Location = new System.Drawing.Point(198, 69);
             this.pnlShadow.Name = "pnlShadow";
-            this.pnlShadow.Size = new System.Drawing.Size(970, 9);
+            this.pnlShadow.Size = new System.Drawing.Size(1022, 9);
             this.pnlShadow.TabIndex = 3;
             // 
             // frm_Main

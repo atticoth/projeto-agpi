@@ -11,51 +11,15 @@ using System.Windows.Forms;
 
 namespace projeto_agpi.Views
 {
-    public partial class frm_Consulta : Form
+    partial class frm_Consulta_New : Forms_Default.frm_Consulta_Mod
     {
-        public frm_Consulta()
+        public frm_Consulta_New() : base("DEFAULT_SELECT_CONSULTA_AGENDADA", true, Forms_Default.GridMode.Infragistics)
         {
             InitializeComponent();
             this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
         }
 
-        private string _strConn = @"Data Source = ITLNB064A\SQL2017; Initial Catalog = DB_AGPI; Integrated Security = True";
-
-        SqlConnection objConect = null;
-        SqlCommand objCommand = null;
-
-        private void LoadConsultas()
-        {
-            string Comando = @"DEFAULT_SELECT_CONSULTA_AGENDADA";
-
-            objConect = new SqlConnection(_strConn);
-            objCommand = new SqlCommand(Comando, objConect);
-
-            try
-            {
-                SqlDataAdapter objAdp = new SqlDataAdapter(objCommand);
-                DataTable DtUser = new DataTable();
-
-                objAdp.Fill(DtUser);
-
-                ugConsulta.DataSource = DtUser;
-                ConfigGrid();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Erro ao acessar o banco!", "Erro");
-            }
-        }
-
-        private void frm_Consulta_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'dB_AGPIDataSet.tbl_ConsultaAgendada' table. You can move, or remove it, as needed.
-            //this.tbl_ConsultaAgendadaTableAdapter.Fill(this.dB_AGPIDataSet.tbl_ConsultaAgendada);
-            LoadConsultas();
-            ConfigGrid();
-        }
-
-        private void ConfigGrid()
+        protected override void ConfigGrid()
         {
             if (!ugConsulta.DisplayLayout.Bands[0].Columns.Exists("AbrePopup"))
             {
@@ -72,20 +36,16 @@ namespace projeto_agpi.Views
             ugConsulta.DisplayLayout.Bands[0].Columns["AbrePopup"].CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.RowSelect;
         }
 
-        private void bnNovoItem_Click(object sender, EventArgs e)
+        protected override List<SqlParameter> Filtros()
         {
-            //frm_Agendar_Consulta agendarConsulta = new frm_Agendar_Consulta();
-            //agendarConsulta.StartPosition = FormStartPosition.CenterScreen;
-            //agendarConsulta.ShowDialog();
-            //LoadConsultas();
+            return base.Filtros();
         }
 
         private void ugConsulta_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
         {
             var NovoDetalhe = new frm_Atendimento((int)ugConsulta.ActiveRow.Cells["CodigoPaciente"].Value);
             NovoDetalhe.ShowDialog();
-
-            LoadConsultas();
+            LoadData();
         }
     }
 }
