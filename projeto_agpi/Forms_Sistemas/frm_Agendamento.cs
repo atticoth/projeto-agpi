@@ -39,5 +39,12 @@ namespace projeto_agpi.Views
 
             LoadData();
         }
+
+        protected override void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+            string cpf = txt_PesquisaCPF.Text;
+
+            PesquisarCPF("DEFAULT_SELECT_PACIENTE_CPF_AGENDAMENTO", cpf);
+        }
     }
 }

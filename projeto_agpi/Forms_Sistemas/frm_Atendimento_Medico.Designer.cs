@@ -270,7 +270,10 @@ namespace projeto_agpi.Forms_Sistemas
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_Atendimento_Medico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Atendimento_Medico";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

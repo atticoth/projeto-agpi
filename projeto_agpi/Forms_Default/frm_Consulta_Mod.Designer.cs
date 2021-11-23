@@ -49,6 +49,7 @@ namespace projeto_agpi.Forms_Default
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ugConsulta = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.btn_Limpar = new FontAwesome.Sharp.IconButton();
             this.btn_Pesquisar = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_PesquisaCPF = new System.Windows.Forms.TextBox();
@@ -81,7 +82,7 @@ namespace projeto_agpi.Forms_Default
             this.pnlGrid.Controls.Add(this.ugConsulta);
             this.pnlGrid.Location = new System.Drawing.Point(0, 77);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(1074, 411);
+            this.pnlGrid.Size = new System.Drawing.Size(901, 309);
             this.pnlGrid.TabIndex = 63;
             // 
             // dataGridView1
@@ -90,7 +91,7 @@ namespace projeto_agpi.Forms_Default
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1074, 411);
+            this.dataGridView1.Size = new System.Drawing.Size(901, 309);
             this.dataGridView1.TabIndex = 1;
             // 
             // ugConsulta
@@ -152,7 +153,7 @@ namespace projeto_agpi.Forms_Default
             this.ugConsulta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ugConsulta.Location = new System.Drawing.Point(0, 0);
             this.ugConsulta.Name = "ugConsulta";
-            this.ugConsulta.Size = new System.Drawing.Size(1074, 411);
+            this.ugConsulta.Size = new System.Drawing.Size(901, 309);
             this.ugConsulta.TabIndex = 0;
             this.ugConsulta.Text = "ultraGrid1";
             // 
@@ -160,14 +161,33 @@ namespace projeto_agpi.Forms_Default
             // 
             this.pnlTitle.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTitle.Controls.Add(this.btn_Limpar);
             this.pnlTitle.Controls.Add(this.btn_Pesquisar);
             this.pnlTitle.Controls.Add(this.label4);
             this.pnlTitle.Controls.Add(this.txt_PesquisaCPF);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(1074, 78);
+            this.pnlTitle.Size = new System.Drawing.Size(901, 78);
             this.pnlTitle.TabIndex = 62;
+            // 
+            // btn_Limpar
+            // 
+            this.btn_Limpar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Limpar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.btn_Limpar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btn_Limpar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Limpar.IconSize = 30;
+            this.btn_Limpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Limpar.Location = new System.Drawing.Point(460, 25);
+            this.btn_Limpar.Name = "btn_Limpar";
+            this.btn_Limpar.Size = new System.Drawing.Size(111, 33);
+            this.btn_Limpar.TabIndex = 72;
+            this.btn_Limpar.Text = "Limpar";
+            this.btn_Limpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Limpar.UseVisualStyleBackColor = true;
+            this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
             // btn_Pesquisar
             // 
@@ -178,7 +198,7 @@ namespace projeto_agpi.Forms_Default
             this.btn_Pesquisar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Pesquisar.IconSize = 30;
             this.btn_Pesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Pesquisar.Location = new System.Drawing.Point(840, 26);
+            this.btn_Pesquisar.Location = new System.Drawing.Point(343, 25);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
             this.btn_Pesquisar.Size = new System.Drawing.Size(111, 33);
             this.btn_Pesquisar.TabIndex = 47;
@@ -223,7 +243,7 @@ namespace projeto_agpi.Forms_Default
             this.BindingNavigatorMoveNextItem,
             this.BindingNavigatorMoveLastItem,
             this.tsbn_NewRow});
-            this.bdNavigator.Location = new System.Drawing.Point(0, 491);
+            this.bdNavigator.Location = new System.Drawing.Point(0, 389);
             this.bdNavigator.MoveFirstItem = this.BindingNavigatorMoveFirstItem;
             this.bdNavigator.MoveLastItem = this.BindingNavigatorMoveLastItem;
             this.bdNavigator.MoveNextItem = this.BindingNavigatorMoveNextItem;
@@ -268,6 +288,7 @@ namespace projeto_agpi.Forms_Default
             // 
             this.BindingNavigatorPositionItem.AccessibleName = "Position";
             this.BindingNavigatorPositionItem.AutoSize = false;
+            this.BindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem";
             this.BindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.BindingNavigatorPositionItem.Text = "0";
@@ -310,7 +331,7 @@ namespace projeto_agpi.Forms_Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 520);
+            this.ClientSize = new System.Drawing.Size(901, 418);
             this.Controls.Add(this.bdNavigator);
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlTitle);
@@ -342,7 +363,7 @@ namespace projeto_agpi.Forms_Default
         public GridMode ViewMode { get; set; }
         protected BindingSource bdSource;
         private DataGridView dataGridView1;
-        protected BindingNavigator bdNavigator;
+        public BindingNavigator bdNavigator;
         protected internal ToolStripLabel BindingNavigatorCountItem;
         protected internal ToolStripButton BindingNavigatorMoveFirstItem;
         protected internal ToolStripButton BindingNavigatorMovePreviousItem;
@@ -353,5 +374,6 @@ namespace projeto_agpi.Forms_Default
         protected internal ToolStripButton BindingNavigatorMoveLastItem;
         private ToolStripButton tsbn_NewRow;
         private FontAwesome.Sharp.IconButton btn_Pesquisar;
+        private FontAwesome.Sharp.IconButton btn_Limpar;
     }
 }

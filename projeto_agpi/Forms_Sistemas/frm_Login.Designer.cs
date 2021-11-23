@@ -29,7 +29,6 @@ namespace projeto_agpi.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHome = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,21 +37,10 @@ namespace projeto_agpi.Views
             this.btnSair = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lbl_Logo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnHome
-            // 
-            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHome.AutoSize = true;
-            this.btnHome.Font = new System.Drawing.Font("Bookman Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.LightGray;
-            this.btnHome.Location = new System.Drawing.Point(109, 45);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(86, 36);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "AGPI";
             // 
             // iconPictureBox1
             // 
@@ -158,12 +146,25 @@ namespace projeto_agpi.Views
             this.txtPassword.TabIndex = 11;
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
+            // lbl_Logo
+            // 
+            this.lbl_Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Logo.AutoSize = true;
+            this.lbl_Logo.Font = new System.Drawing.Font("Imprint MT Shadow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Logo.ForeColor = System.Drawing.Color.White;
+            this.lbl_Logo.Location = new System.Drawing.Point(81, 28);
+            this.lbl_Logo.Name = "lbl_Logo";
+            this.lbl_Logo.Size = new System.Drawing.Size(150, 57);
+            this.lbl_Logo.TabIndex = 12;
+            this.lbl_Logo.Text = "AGPI";
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(319, 353);
+            this.Controls.Add(this.lbl_Logo);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnSair);
@@ -172,7 +173,6 @@ namespace projeto_agpi.Views
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.iconPictureBox1);
-            this.Controls.Add(this.btnHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -185,8 +185,6 @@ namespace projeto_agpi.Views
         }
 
         #endregion
-
-        private System.Windows.Forms.Label btnHome;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -195,5 +193,6 @@ namespace projeto_agpi.Views
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lbl_Logo;
     }
 }

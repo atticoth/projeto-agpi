@@ -125,6 +125,9 @@
     <EmbeddedResource Include="Forms_Sistemas\frm_Consulta.resx">
       <DependentUpon>frm_Consulta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Sistemas\frm_Paciente.resx">
+      <DependentUpon>frm_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Forms_Sistemas\frm_Agendar_Consulta.resx">
       <DependentUpon>frm_Agendar_Consulta.cs</DependentUpon>

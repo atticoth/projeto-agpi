@@ -19,7 +19,7 @@ namespace projeto_agpi.Forms_Default
 
     public partial class frm_Consulta_Mod : Form
     {
-        private DataSet myDataSet;
+        //private DataSet myDataSet;
         protected string strProc;
         protected bool blnAutoExec;
 
@@ -41,11 +41,6 @@ namespace projeto_agpi.Forms_Default
         }
 
         protected virtual List<SqlParameter>Filtros()
-        {
-            return null;
-        }
-
-        protected virtual SqlCommand ProcedureSave()
         {
             return null;
         }
@@ -83,6 +78,7 @@ namespace projeto_agpi.Forms_Default
             }
         }
 
+
         protected void LerForm()
         {
             if(blnAutoExec)
@@ -102,6 +98,51 @@ namespace projeto_agpi.Forms_Default
             LerForm();
         }
 
+
+        protected void PesquisarCPF(string strProc, string cpf)
+        {
+            try
+            {
+                Cursor = Cursors.WaitCursor;
+                if (ViewMode == GridMode.DatagridView)
+                {
+                    this.dataGridView1.DataSource = this.bdSource;
+                    ugConsulta.Visible = false;
+                }
+                else
+                {
+                    this.ugConsulta.DataSource = this.bdSource;
+                    dataGridView1.Visible = false;
+                }
+
+                SqlCommand objCommand = new SqlCommand(strProc, frm_Main.Connection());
+                objCommand.CommandType = CommandType.StoredProcedure;
+                objCommand.Parameters.Add(new SqlParameter("@CPF", cpf));
+                SqlDataAdapter objAdp = new SqlDataAdapter(objCommand);
+                DataTable DtUser = new DataTable();
+
+                objAdp.Fill(DtUser);
+
+                bdSource.DataSource = null;
+                bdSource.DataSource = DtUser;
+                bdNavigator.BindingSource = bdSource;
+
+                ConfigGrid();
+                Cursor = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Cursor = Cursors.Default;
+            }
+        }
+
+        protected void LimparFiltros()
+        {
+            txt_PesquisaCPF.Text = " ";
+            RecarregaGrid();
+        }
+
         protected virtual void btn_Pesquisar_Click(object sender, EventArgs e)
         {
 
@@ -110,6 +151,11 @@ namespace projeto_agpi.Forms_Default
         protected virtual void tsbn_NewRow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Limpar_Click(object sender, EventArgs e)
+        {
+            LimparFiltros();
         }
     }
 }

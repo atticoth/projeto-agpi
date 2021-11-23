@@ -44,14 +44,6 @@ namespace projeto_agpi.Forms_Sistemas
             ((System.ComponentModel.ISupportInitialize)(this.bdSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlTitle
-            // 
-            this.pnlTitle.Size = new System.Drawing.Size(800, 78);
-            // 
-            // pnlGrid
-            // 
-            this.pnlGrid.Size = new System.Drawing.Size(800, 341);
-            // 
             // ugConsulta
             // 
             appearance1.BackColor = System.Drawing.SystemColors.Window;
@@ -96,14 +88,13 @@ namespace projeto_agpi.Forms_Sistemas
             this.ugConsulta.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.ugConsulta.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ugConsulta.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.ugConsulta.Size = new System.Drawing.Size(800, 341);
             this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
             // 
             // frm_Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(901, 418);
             this.Name = "frm_Consulta";
             this.Text = "frm_Consulta";
             this.pnlTitle.ResumeLayout(false);

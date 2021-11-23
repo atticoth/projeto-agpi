@@ -43,7 +43,17 @@ namespace projeto_agpi.Forms_Sistemas
 
         private void ugConsulta_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
         {
+            frm_Atendimento_Medico atendimentoMedico = new frm_Atendimento_Medico();
+            atendimentoMedico.ShowDialog();
 
+            LoadData();
+        }
+
+        protected override void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+            string cpf = txt_PesquisaCPF.Text;
+
+            PesquisarCPF("DEFAULT_SELECT_PACIENTE_CPF_AGENDAMENTO", cpf);
         }
     }
 }

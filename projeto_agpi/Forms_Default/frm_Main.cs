@@ -150,12 +150,6 @@ namespace projeto_agpi
             childForm.Show();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            currentChildForm.Close();
-            Reset();
-        }
-
         private void Reset()
         {
             DisableButton();
@@ -163,6 +157,12 @@ namespace projeto_agpi
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lblTitle.Text = "Home";
+        }
+
+        private void lbl_Logo_Click(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
+            Reset();
         }
 
         private void btnPaciente_Click(object sender, EventArgs e)
