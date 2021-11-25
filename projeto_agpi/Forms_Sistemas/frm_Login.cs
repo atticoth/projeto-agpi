@@ -41,10 +41,9 @@ namespace projeto_agpi.Views
                     }
                 }
 
-                Id = int.Parse(dataTable.Rows[0].ItemArray[0].ToString());
-
                 if (dataTable.Rows.Count > 0)
                 {
+                    Id = int.Parse(dataTable.Rows[0].ItemArray[0].ToString());
                     return true;
                 }
                 else

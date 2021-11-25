@@ -42,6 +42,5 @@ C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\ob
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.csproj.GenerateResource.cache
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.exe.licenses
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.csproj.CoreCompileInputs.cache
-C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.csproj.CopyComplete
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.exe
 C:\Users\thiago.attico\Desktop\Projeto AGPI\Projeto\projeto_agpi\projeto_agpi\obj\Debug\projeto_agpi.pdb

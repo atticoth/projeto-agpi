@@ -15,6 +15,7 @@ namespace projeto_agpi.Views
     {
         public int Perfil;
         public bool Inativo;
+        public int inativoCheck;
         int codFunc;
         public frm_NewFuncionario(int ID)
         {
@@ -157,7 +158,7 @@ namespace projeto_agpi.Views
                         sqlComando.Parameters.Add(new SqlParameter("@Telefone", telefone));
                         sqlComando.Parameters.Add(new SqlParameter("@Email", email));
                         sqlComando.Parameters.Add(new SqlParameter("@CodPerfil", Perfil));
-                        sqlComando.Parameters.Add(new SqlParameter("@Inativo", Inativo));
+                        sqlComando.Parameters.Add(new SqlParameter("@Inativo", inativoCheck));
                         sqlComando.ExecuteNonQuery();
                         sqlConnection.Close();
                     }
@@ -221,6 +222,7 @@ namespace projeto_agpi.Views
                 string cargo = txt_Cargo.Text;
                 string telefone = txt_Telefone.Text;
                 string email = txt_Email.Text;
+                int inativo;
 
                 if (rdbtn_Master.Checked)
                 {
@@ -239,7 +241,11 @@ namespace projeto_agpi.Views
 
                 if (cbx_Inativo.Checked)
                 {
-                    Inativo = true;
+                    inativoCheck = 1;
+                }
+                else
+                {
+                    inativoCheck = 0;
                 }
 
                 AtualizarFuncionario(nome, senha, cpf, cargo, telefone, email);

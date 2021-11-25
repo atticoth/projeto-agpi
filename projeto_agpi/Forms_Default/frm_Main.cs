@@ -73,7 +73,7 @@ namespace projeto_agpi
                 }
 
                 userName = dataTable.Rows[0].ItemArray[0].ToString();
-                codPerfil = int.Parse(dataTable.Rows[0].ItemArray[1].ToString());
+                codPerfil = int.Parse(dataTable.Rows[0].ItemArray[2].ToString());
                 lblUserName.Text = userName;
             }
             catch (SqlException ex)
@@ -178,6 +178,14 @@ namespace projeto_agpi
                 btn_Consultas.Visible = false;
                 btn_Paciente.Visible = false;
                 btn_NovoUsuario.Visible = false;
+            }
+
+            if (codPerfil == 1)
+            {
+                btn_Consultas.Visible = true;
+                btn_Paciente.Visible = true;
+                btn_Atendimento.Visible = true;
+                btn_NovoUsuario.Visible = true;
             }
         }
 
