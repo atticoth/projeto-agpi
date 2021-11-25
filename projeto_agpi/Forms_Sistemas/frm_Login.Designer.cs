@@ -130,7 +130,6 @@ namespace projeto_agpi.Views
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(196, 22);
             this.txtUsername.TabIndex = 10;
-            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // txtPassword
             // 
@@ -144,7 +143,6 @@ namespace projeto_agpi.Views
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(196, 22);
             this.txtPassword.TabIndex = 11;
-            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
             // lbl_Logo
             // 

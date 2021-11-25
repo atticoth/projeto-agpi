@@ -13,8 +13,10 @@ namespace projeto_agpi.Views
 {
     partial class frm_Agendamento : Forms_Default.frm_Consulta_Mod
     {
-        public frm_Agendamento() : base("DEFAULT_SELECT_CONSULTA_AGENDADA", true, Forms_Default.GridMode.Infragistics)
+        int meuID;
+        public frm_Agendamento(int ID) : base("DEFAULT_SELECT_CONSULTA_AGENDADA", true, Forms_Default.GridMode.Infragistics)
         {
+            meuID = ID;
             InitializeComponent();
         }
 
@@ -34,8 +36,9 @@ namespace projeto_agpi.Views
 
         protected override void tsbn_NewRow_Click(object sender, EventArgs e)
         {
-            frm_Agendar_Consulta agendarConsulta = new frm_Agendar_Consulta();
-            agendarConsulta.ShowDialog();
+            var NovoDetalhe = new frm_Agendar_Consulta();
+            var NovoPopup = new Forms_Default.frm_PopUp(NovoDetalhe, "Novo Consulta", true);
+            NovoPopup.ShowDialog();
 
             LoadData();
         }

@@ -13,8 +13,10 @@ namespace projeto_agpi.Views
 {
     partial class frm_Paciente : Forms_Default.frm_Consulta_Mod
     {
-        public frm_Paciente() : base("DEFAULT_SELECT_PACIENTE", true, Forms_Default.GridMode.Infragistics)
+        int meuID;
+        public frm_Paciente(int ID) : base("DEFAULT_SELECT_PACIENTE", true, Forms_Default.GridMode.Infragistics)
         {
+            meuID = ID;
             InitializeComponent();
         }
 
@@ -33,8 +35,9 @@ namespace projeto_agpi.Views
 
         protected override void tsbn_NewRow_Click(object sender, EventArgs e)
         {
-            frm_NewPaciente newPaciente = new frm_NewPaciente();
-            newPaciente.ShowDialog();
+            var NovoDetalhe = new frm_NewPaciente();
+            var NovoPopup = new Forms_Default.frm_PopUp(NovoDetalhe, "Novo Paciente", true);
+            NovoPopup.ShowDialog();
             LoadData();
         }
 

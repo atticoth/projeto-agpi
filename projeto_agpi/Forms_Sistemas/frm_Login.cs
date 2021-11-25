@@ -31,7 +31,7 @@ namespace projeto_agpi.Views
                     sqlConnection.Open();
                     using (SqlCommand sqlComando = sqlConnection.CreateCommand())
                     {
-                        sqlComando.CommandText = "DEFAULT_SELECT_LOGIN_USER";
+                        sqlComando.CommandText = "DEFAULT_SELECT_LOGIN";
                         sqlComando.CommandType = CommandType.StoredProcedure;
                         sqlComando.Parameters.Add(new SqlParameter("@Username", username));
                         sqlComando.Parameters.Add(new SqlParameter("@Password", password));
@@ -81,19 +81,6 @@ namespace projeto_agpi.Views
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void txtUsername_Click(object sender, EventArgs e)
-        {
-            txtUsername.Clear();
-            txtUsername.ForeColor = Color.WhiteSmoke;
-        }
-
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-            txtPassword.Clear();
-            txtPassword.ForeColor = Color.WhiteSmoke;
-            txtPassword.PasswordChar = '*';
         }
     }
 }

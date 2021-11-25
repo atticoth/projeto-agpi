@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace projeto_agpi.Forms_Sistemas
 {
     partial class frm_Consulta : Forms_Default.frm_Consulta_Mod
     {
-        public frm_Consulta() : base ("DEFAULT_SELECT_CONSULTA_AGENDADA", true, Forms_Default.GridMode.Infragistics)
+        int meuID;
+        public frm_Consulta(int ID) : base ("DEFAULT_SELECT_CONSULTA_AGENDADA", true, Forms_Default.GridMode.Infragistics)
         {
+            meuID = ID;
             InitializeComponent();
-            this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
+            //this.ugConsulta.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugConsulta_ClickCellButton);
         }
 
         protected override void ConfigGrid()
@@ -43,8 +38,9 @@ namespace projeto_agpi.Forms_Sistemas
 
         private void ugConsulta_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
         {
-            frm_Atendimento_Medico atendimentoMedico = new frm_Atendimento_Medico();
-            atendimentoMedico.ShowDialog();
+            var NovoDetalhe = new frm_Atendimento_Medico((int)ugConsulta.ActiveRow.Cells["CodigoConsulta"].Value);
+            var NovoPopup = new Forms_Default.frm_PopUp(NovoDetalhe, "Detalhes Atendimento", true);
+            NovoPopup.ShowDialog();
 
             LoadData();
         }

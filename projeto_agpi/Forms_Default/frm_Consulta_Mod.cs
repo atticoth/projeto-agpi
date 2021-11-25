@@ -40,7 +40,7 @@ namespace projeto_agpi.Forms_Default
         {
         }
 
-        protected virtual List<SqlParameter>Filtros()
+        protected virtual List<SqlParameter> Filtros()
         {
             return null;
         }
@@ -71,6 +71,8 @@ namespace projeto_agpi.Forms_Default
                 bdNavigator.BindingSource = bdSource;
 
                 ConfigGrid();
+                
+               
             }
             catch (Exception ex)
             {

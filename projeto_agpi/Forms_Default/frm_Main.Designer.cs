@@ -31,10 +31,12 @@ namespace projeto_agpi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnNovoUsuario = new FontAwesome.Sharp.IconButton();
             this.btnAtendimento = new FontAwesome.Sharp.IconButton();
             this.btnConsultas = new FontAwesome.Sharp.IconButton();
             this.btnPaciente = new FontAwesome.Sharp.IconButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.lbl_Logo = new System.Windows.Forms.Label();
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
@@ -43,9 +45,8 @@ namespace projeto_agpi
             this.lblTitle = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.pnlDesktop = new System.Windows.Forms.Panel();
-            this.pnlShadow = new System.Windows.Forms.Panel();
             this.ptbx_Home = new System.Windows.Forms.PictureBox();
-            this.lbl_Logo = new System.Windows.Forms.Label();
+            this.pnlShadow = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.pnlTitleBar.SuspendLayout();
@@ -57,6 +58,7 @@ namespace projeto_agpi
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.pnlMenu.Controls.Add(this.btnNovoUsuario);
             this.pnlMenu.Controls.Add(this.btnAtendimento);
             this.pnlMenu.Controls.Add(this.btnConsultas);
             this.pnlMenu.Controls.Add(this.btnPaciente);
@@ -66,6 +68,29 @@ namespace projeto_agpi
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(198, 547);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnNovoUsuario
+            // 
+            this.btnNovoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNovoUsuario.FlatAppearance.BorderSize = 0;
+            this.btnNovoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoUsuario.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNovoUsuario.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnNovoUsuario.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnNovoUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNovoUsuario.IconSize = 38;
+            this.btnNovoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovoUsuario.Location = new System.Drawing.Point(-3, 487);
+            this.btnNovoUsuario.Name = "btnNovoUsuario";
+            this.btnNovoUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnNovoUsuario.Size = new System.Drawing.Size(201, 60);
+            this.btnNovoUsuario.TabIndex = 6;
+            this.btnNovoUsuario.Text = " Novo Usuário";
+            this.btnNovoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovoUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNovoUsuario.UseVisualStyleBackColor = true;
+            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
             // 
             // btnAtendimento
             // 
@@ -146,6 +171,19 @@ namespace projeto_agpi
             this.pnlLogo.Size = new System.Drawing.Size(198, 100);
             this.pnlLogo.TabIndex = 0;
             // 
+            // lbl_Logo
+            // 
+            this.lbl_Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Logo.AutoSize = true;
+            this.lbl_Logo.Font = new System.Drawing.Font("Imprint MT Shadow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Logo.ForeColor = System.Drawing.Color.White;
+            this.lbl_Logo.Location = new System.Drawing.Point(22, 21);
+            this.lbl_Logo.Name = "lbl_Logo";
+            this.lbl_Logo.Size = new System.Drawing.Size(150, 57);
+            this.lbl_Logo.TabIndex = 0;
+            this.lbl_Logo.Text = "AGPI";
+            this.lbl_Logo.Click += new System.EventHandler(this.lbl_Logo_Click);
+            // 
             // pnlTitleBar
             // 
             this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
@@ -168,7 +206,7 @@ namespace projeto_agpi
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblUserName.Location = new System.Drawing.Point(862, 39);
+            this.lblUserName.Location = new System.Drawing.Point(855, 39);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(54, 24);
             this.lblUserName.TabIndex = 5;
@@ -263,15 +301,6 @@ namespace projeto_agpi
             this.pnlDesktop.Size = new System.Drawing.Size(1022, 478);
             this.pnlDesktop.TabIndex = 2;
             // 
-            // pnlShadow
-            // 
-            this.pnlShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
-            this.pnlShadow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlShadow.Location = new System.Drawing.Point(198, 69);
-            this.pnlShadow.Name = "pnlShadow";
-            this.pnlShadow.Size = new System.Drawing.Size(1022, 9);
-            this.pnlShadow.TabIndex = 3;
-            // 
             // ptbx_Home
             // 
             this.ptbx_Home.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -283,18 +312,14 @@ namespace projeto_agpi
             this.ptbx_Home.TabIndex = 1;
             this.ptbx_Home.TabStop = false;
             // 
-            // lbl_Logo
+            // pnlShadow
             // 
-            this.lbl_Logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_Logo.AutoSize = true;
-            this.lbl_Logo.Font = new System.Drawing.Font("Imprint MT Shadow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Logo.ForeColor = System.Drawing.Color.White;
-            this.lbl_Logo.Location = new System.Drawing.Point(22, 21);
-            this.lbl_Logo.Name = "lbl_Logo";
-            this.lbl_Logo.Size = new System.Drawing.Size(150, 57);
-            this.lbl_Logo.TabIndex = 0;
-            this.lbl_Logo.Text = "AGPI";
-            this.lbl_Logo.Click += new System.EventHandler(this.lbl_Logo_Click);
+            this.pnlShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(24)))), ((int)(((byte)(58)))));
+            this.pnlShadow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlShadow.Location = new System.Drawing.Point(198, 69);
+            this.pnlShadow.Name = "pnlShadow";
+            this.pnlShadow.Size = new System.Drawing.Size(1022, 9);
+            this.pnlShadow.TabIndex = 3;
             // 
             // frm_Main
             // 
@@ -308,6 +333,7 @@ namespace projeto_agpi
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frm_Main_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
@@ -339,6 +365,7 @@ namespace projeto_agpi
         private FontAwesome.Sharp.IconButton btnAtendimento;
         private System.Windows.Forms.PictureBox ptbx_Home;
         private System.Windows.Forms.Label lbl_Logo;
+        private FontAwesome.Sharp.IconButton btnNovoUsuario;
     }
 }
 

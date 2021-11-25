@@ -16,18 +16,13 @@ namespace projeto_agpi.Views
             InitializeComponent();
         }
 
-        public static SqlConnection Connection()
-        {
-            return new SqlConnection(@"Data Source = ITLNB064A\SQL2017; Initial Catalog = DB_AGPI; Integrated Security = True");
-        }
-
         public void LoadCombo()
         {
             DataTable dataTable = new DataTable();
 
             try
             {
-                using (SqlConnection sqlConnection = Connection())
+                using (SqlConnection sqlConnection = frm_Main.Connection())
                 {
                     sqlConnection.Open();
                     using (SqlCommand sqlComando = sqlConnection.CreateCommand())
@@ -38,35 +33,32 @@ namespace projeto_agpi.Views
                         dataTable.Load(reader);
                     }
                 }
+                cboDoutores.Items.Insert(0, " ");
                 cboDoutores.DataSource = dataTable;
                 cboDoutores.DisplayMember = "Nome";
                 cboDoutores.ValueMember = "CodFunc";
-                cboDoutores.Text = " ";
 
             }
             catch (SqlException ex)
             {
                 MessageBox.Show("Não foi possivel conectar ao banco!", "Erro");
             }
-        }
+        }        
 
-        private void frm_Agendar_Consulta_Load(object sender, EventArgs e)
-        {
-            LoadCombo();
-        }
-
-        public void SelectPaciente(string Comando)
+        public void SelectPaciente(string strProc, string cpf)
         {
             DataTable dataTable = new DataTable();
 
             try
             {
-                using (SqlConnection sqlConnection = Connection())
+                using (SqlConnection sqlConnection = frm_Main.Connection())
                 {
                     sqlConnection.Open();
                     using (SqlCommand sqlComando = sqlConnection.CreateCommand())
                     {
-                        sqlComando.CommandText = Comando;
+                        sqlComando.CommandText = strProc;
+                        sqlComando.CommandType = CommandType.StoredProcedure;
+                        sqlComando.Parameters.Add(new SqlParameter("@CPF", cpf));
                         var reader = sqlComando.ExecuteReader();
 
                         dataTable.Load(reader);
@@ -80,59 +72,71 @@ namespace projeto_agpi.Views
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Erro");
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            string cpfPesquisar = txt_PesquisaCPF.Text;
-
-            string Comando = String.Format("SELECT [CodPacien], [Nome] FROM tbl_Paciente WHERE [CPF] = '{0}'", cpfPesquisar);
-
-            SelectPaciente(Comando);
-
-        }
-
-        public void AgendarConsulta(string Comando)
+        public void AgendarConsulta(int CodFunc, DateTime DataConsulta, string HorarioConsulta)
         {
             try
             {
-                using (SqlConnection sqlConnection = Connection())
+                using (SqlConnection sqlConnection = frm_Main.Connection())
                 {
                     sqlConnection.Open();
                     using (SqlCommand sqlComando = sqlConnection.CreateCommand())
                     {
-                        sqlComando.CommandText = Comando;
+                        sqlComando.CommandText = "DEFAULT_INSERT_AGENDAR_CONSULTA";
+                        sqlComando.CommandType = CommandType.StoredProcedure;
+                        sqlComando.Parameters.Add(new SqlParameter("@CodPacien", CodPacien));
+                        sqlComando.Parameters.Add(new SqlParameter("@CodFunc", CodFunc));
+                        sqlComando.Parameters.Add(new SqlParameter("@DataConsulta", DataConsulta));
+                        sqlComando.Parameters.Add(new SqlParameter("@HorarioConsulta", HorarioConsulta));
                         sqlComando.ExecuteNonQuery();
                         sqlConnection.Close();
                     }
                 }
                 MessageBox.Show("Consulta Agendada!", "Aviso!", MessageBoxButtons.OK);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK);
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
 
-        private void btnAgendar_Click(object sender, EventArgs e)
+        private void frm_Agendar_Consulta_Load(object sender, EventArgs e)
         {
-            string data = dtDataConsulta.Value.ToString();
-            string horario = dtHorario.Value.ToString();
-            string motivoConsulta = txtMotivoConsulta.Text;
-            
+            LoadCombo();
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+            string cpf = txt_PesquisaCPF.Text;
+
+            SelectPaciente("DEFAULT_SELECT_PACIENTE_CPF_AGENDAR_CONSULTA", cpf);
+        }
+
+        private void btn_Salvar_Click(object sender, EventArgs e)
+        {
+            DateTime DataConsulta = dtDataConsulta.Value;
+            string HorarioConsulta = txt_HorarioConsulta.Text;
+
 
             if (cboDoutores.SelectedIndex >= 0)
             {
                 CodFunc = Convert.ToInt32(cboDoutores.SelectedValue);
             }
 
-            string comando = String.Format("insert into tbl_ConsultaAgendada([Cod_Pacien_FK], [Cod_Func_FK], [Data], [Horario], [MotivoConsulta], [Data_Insert]) " +
-               "values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", CodPacien, CodFunc, data, horario, motivoConsulta, DateTime.Now);
+            AgendarConsulta(CodFunc, DataConsulta, HorarioConsulta);
+        }
 
-            AgendarConsulta(comando);
+        private void btn_Limpar_Click(object sender, EventArgs e)
+        {
+            txt_PesquisaCPF.Text = " ";
+            txt_NomePaciente.Text = " ";
+            cboDoutores.SelectedIndex = -1;
+            dtDataConsulta.Value = DateTime.Now;
+            txt_HorarioConsulta.Text = " ";
         }
     }
 }

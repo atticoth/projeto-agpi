@@ -17,6 +17,7 @@ namespace projeto_agpi
         private Form currentChildForm;
         public string userName;
         public int codID;
+        public int codPerfil;
 
         public frm_Main(int Id)
         {
@@ -62,7 +63,9 @@ namespace projeto_agpi
                     sqlConnection.Open();
                     using (SqlCommand sqlComando = sqlConnection.CreateCommand())
                     {
-                        sqlComando.CommandText = String.Format("SELECT [NameUser] FROM [DB_AGPI].[dbo].[tbl_LoginUser] WHERE [CodID] = '{0}'", codID);
+                        sqlComando.CommandText = String.Format("[DEFAULT_SELECT_FUNCIONARIO]");
+                        sqlComando.CommandType = CommandType.StoredProcedure;
+                        sqlComando.Parameters.Add(new SqlParameter("@CodFunc", codID));
                         var reader = sqlComando.ExecuteReader();
 
                         dataTable.Load(reader);
@@ -70,6 +73,7 @@ namespace projeto_agpi
                 }
 
                 userName = dataTable.Rows[0].ItemArray[0].ToString();
+                codPerfil = int.Parse(dataTable.Rows[0].ItemArray[1].ToString());
                 lblUserName.Text = userName;
             }
             catch (SqlException ex)
@@ -159,6 +163,24 @@ namespace projeto_agpi
             lblTitle.Text = "Home";
         }
 
+
+
+        private void frm_Main_Load(object sender, EventArgs e)
+        {
+            if(codPerfil == 2)
+            {
+                btnAtendimento.Visible = false;
+                btnNovoUsuario.Visible = false;
+            }
+
+            if(codPerfil == 3)
+            {
+                btnConsultas.Visible = false;
+                btnPaciente.Visible = false;
+                btnNovoUsuario.Visible = false;
+            }
+        }
+
         private void lbl_Logo_Click(object sender, EventArgs e)
         {
             currentChildForm.Close();
@@ -168,19 +190,25 @@ namespace projeto_agpi
         private void btnPaciente_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new frm_Paciente());
+            OpenChildForm(new frm_Paciente(codID));
         }
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new frm_Agendamento());
+            OpenChildForm(new frm_Agendamento(codID));
         }
 
         private void btnAtendimento_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new frm_Consulta());
+            OpenChildForm(new frm_Consulta(codID));
+        }
+
+        private void btnNovoUsuario_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color5);
+            OpenChildForm(new frm_Consulta(codID));
         }
 
         private void btnClose_Click(object sender, EventArgs e)
