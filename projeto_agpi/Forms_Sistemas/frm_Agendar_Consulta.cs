@@ -33,7 +33,7 @@ namespace projeto_agpi.Views
                         dataTable.Load(reader);
                     }
                 }
-                cboDoutores.Items.Insert(0, " ");
+                //cboDoutores.Items.Insert(0, " ");
                 cboDoutores.DataSource = dataTable;
                 cboDoutores.DisplayMember = "Nome";
                 cboDoutores.ValueMember = "CodFunc";

@@ -63,7 +63,7 @@ namespace projeto_agpi
                     sqlConnection.Open();
                     using (SqlCommand sqlComando = sqlConnection.CreateCommand())
                     {
-                        sqlComando.CommandText = String.Format("[DEFAULT_SELECT_FUNCIONARIO]");
+                        sqlComando.CommandText = String.Format("DEFAULT_SELECT_FUNCIONARIO_MAIN");
                         sqlComando.CommandType = CommandType.StoredProcedure;
                         sqlComando.Parameters.Add(new SqlParameter("@CodFunc", codID));
                         var reader = sqlComando.ExecuteReader();
@@ -167,17 +167,17 @@ namespace projeto_agpi
 
         private void frm_Main_Load(object sender, EventArgs e)
         {
-            if(codPerfil == 2)
-            {
-                btnAtendimento.Visible = false;
-                btnNovoUsuario.Visible = false;
-            }
-
             if(codPerfil == 3)
             {
-                btnConsultas.Visible = false;
-                btnPaciente.Visible = false;
-                btnNovoUsuario.Visible = false;
+                btn_Atendimento.Visible = false;
+                btn_NovoUsuario.Visible = false;
+            }
+
+            if(codPerfil == 2)
+            {
+                btn_Consultas.Visible = false;
+                btn_Paciente.Visible = false;
+                btn_NovoUsuario.Visible = false;
             }
         }
 
@@ -205,10 +205,16 @@ namespace projeto_agpi
             OpenChildForm(new frm_Consulta(codID));
         }
 
-        private void btnNovoUsuario_Click(object sender, EventArgs e)
+        private void btn_Historico_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new frm_Consulta(codID));
+            OpenChildForm(new frm_Historico());
+        }
+
+        private void btnNovoUsuario_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new frm_Funcionario());
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -43,7 +43,7 @@ namespace projeto_agpi.Views
                         sqlConnection.Close();
                     }
                 }
-                MessageBox.Show("Usuário cadastrado com sucesso", "Aviso!", MessageBoxButtons.OK);
+                MessageBox.Show("Paciente cadastrado com sucesso", "Aviso!", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {

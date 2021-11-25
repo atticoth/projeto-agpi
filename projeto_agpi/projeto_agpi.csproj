@@ -96,6 +96,18 @@
     <Compile Include="Forms_Sistemas\frm_Consulta.Designer.cs">
       <DependentUpon>frm_Consulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_Sistemas\frm_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Sistemas\frm_Funcionario.Designer.cs">
+      <DependentUpon>frm_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Sistemas\frm_Historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Sistemas\frm_Historico.Designer.cs">
+      <DependentUpon>frm_Historico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_Sistemas\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="Forms_Default\frm_Main.Designer.cs">
       <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Sistemas\frm_NewFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Sistemas\frm_NewFuncionario.Designer.cs">
+      <DependentUpon>frm_NewFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,6 +151,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Sistemas\frm_Consulta.resx">
       <DependentUpon>frm_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Sistemas\frm_Funcionario.resx">
+      <DependentUpon>frm_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Sistemas\frm_NewFuncionario.resx">
+      <DependentUpon>frm_NewFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_Sistemas\frm_Paciente.resx">
       <DependentUpon>frm_Paciente.cs</DependentUpon>
@@ -175,6 +199,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\grayicons %281%29.png" />
     <Content Include="Resources\grayicons %2845%29.png" />
     <None Include="Resources\saveredmini.png" />
     <None Include="Resources\redIcons %281%29.png" />
